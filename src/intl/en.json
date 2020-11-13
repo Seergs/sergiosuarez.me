@@ -1,0 +1,51 @@
+{
+  "home": {
+    "welcome": {
+      "title": "Hi there!",
+      "name": "I'm Sergio",
+      "description": {
+        "1": "A software engineer",
+        "2": "& student"
+      }
+    },
+    "about": {
+      "subtitle": "About me",
+      "text": {
+        "1": "I'm a 20 year old computer engineer student at UDG.",
+        "2": "In my journey as a developer I've worked with talented people because I enjoy learning and collaborating to create beautiful and innovating products"
+      },
+      "resume": "Download my resume"
+    },
+    "skills": {
+      "text": {
+        "1": "Through the years I've learned a lot in all sorts of technologies for web development and computer engineering.",
+        "2": "This skills have helped me build applications to solve real life problems."
+      },
+      "col_1": "Programming",
+      "col_2": "Libraries & frameworks",
+      "col_3": "Tools & platforms"
+    },
+    "projects_section": {
+      "title": "Projects",
+      "link": "VIEW PROJECT",
+      "projects": {
+        "mim": {
+          "name": "Master Incident Manager",
+          "description": "An issue tracker made to help CISCO Supply Chain to keep track, analyzing and providing solutions for incidents inside the company."
+        },
+        "chatify": {
+          "name": "Chatify",
+          "description": "A real time chat web application to chat with everyone around the world."
+        },
+        "hpwiki": {
+          "name": "Harry Potter Wiki",
+          "description": "A website for Potterheads like me with fun facts and info about the Harry Potter universe."
+        },
+        "azahares-leslie": {
+          "name": "Azahares Leslie",
+          "description": "A landing, page for a local business."
+        }
+      }
+    }
+  }
+}

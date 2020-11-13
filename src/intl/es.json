@@ -1,0 +1,51 @@
+{
+  "home": {
+    "welcome": {
+      "title": "Hola!",
+      "name": "Soy Sergio",
+      "description": {
+        "1": "Ingeniero de software",
+        "2": "& estudiante"
+      }
+    },
+    "about": {
+      "subtitle": "Acerca de mi",
+      "text": {
+        "1": "Soy un estudiante de ingeniería en computación en UDG",
+        "2": "En mi viaje como desarrollador he trabajado con personas muy talentosas porque me gusta aprender y colaborar para crear increíbles e inovadores productos."
+      },
+      "resume": "Ve mi currículum"
+    },
+    "skills": {
+      "text": {
+        "1": "A lo largo de los años he aprendido bastante sobre diversas tecnologías para desarrollo web e ingeniería de software.",
+        "2": "Estas tecnologías me han ayudado a crear aplicaciones que resulevan problemas del mundo real."
+      },
+      "col_1": "Programación",
+      "col_2": "Librerías & frameworks",
+      "col_3": "Herramientas & plataformas"
+    },
+    "projects_section": {
+      "title": "Proyectos",
+      "link": "VER PROJECTO",
+      "projects": {
+        "mim": {
+          "name": "Master Incident Manager",
+          "description": "Administrador de incidentes para ayudar a CISCO Supply Chain a llevar un registro, analizar y proveer soluciones de incidentes dentro de la compañia."
+        },
+        "chatify": {
+          "name": "Chatify",
+          "description": "Aplicación web para chatear en tiempo real con cualquier persona del mundo."
+        },
+        "hpwiki": {
+          "name": "Harry Potter Wiki",
+          "description": "Página web para Ptterheads como yo con datos curiosos e información interesante sobre el universo de Harry Potter."
+        },
+        "azahares-leslie": {
+          "name": "Azahares Leslie",
+          "description": "Página web para un negocio local de azahares."
+        }
+      }
+    }
+  }
+}
