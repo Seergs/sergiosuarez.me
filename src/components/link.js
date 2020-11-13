@@ -2,8 +2,7 @@ import React from "react";
 import styled, { css } from "styled-components/macro";
 import Chevron from "../svg/chevron.svg";
 import mixins from "../theme/mixins";
-import { Link as GatsbyLink } from "gatsby";
-const { flexRow, justifyCenter, alignCenter } = mixins;
+const { justifyCenter, alignCenter } = mixins;
 
 export const StyledLink = styled.span`
   ${(props) => css`

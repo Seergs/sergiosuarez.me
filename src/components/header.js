@@ -1,6 +1,6 @@
 import React from "react";
 import LogoSvg from "../svg/logo.svg";
-import styled, { css } from "styled-components/macro";
+import styled from "styled-components/macro";
 import { Link } from "gatsby";
 
 const Wrapper = styled.header`

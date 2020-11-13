@@ -1,5 +1,4 @@
 import React from "react";
-import data from "../intl/en.json";
 import styled, { css } from "styled-components/macro";
 import Image from "gatsby-image";
 import Text from "./text";
@@ -12,6 +11,9 @@ const Card = styled.li`
     &:nth-child(1) {
       grid-column: 1 / 5;
       text-align: center;
+      ${ImageContainer} {
+        background-color: #f9fbfb;
+      }
 
       ${Text} {
         margin: 0 auto 1rem auto;
@@ -21,16 +23,21 @@ const Card = styled.li`
       grid-column: 1 / 3;
       ${ImageContainer} {
         height: 350px;
+        background-color: #fdfff4;
       }
     }
     &:nth-child(3) {
       grid-column: 3 / 5;
       ${ImageContainer} {
         height: 350px;
+        background-color: #f1f2fa;
       }
     }
     &:nth-child(4) {
       grid-column: 2 / 4;
+      ${ImageContainer} {
+        background-color: #f9fbfb;
+      }
     }
     ${Text} {
       margin-bottom: 1rem;
@@ -39,7 +46,6 @@ const Card = styled.li`
 `;
 
 const ImageContainer = styled(Link)`
-  background-color: #f9fbfb;
   border-radius: 5px;
   align-items: center;
   display: flex;

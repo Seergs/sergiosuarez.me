@@ -1,6 +1,6 @@
 import React from "react";
 import Subtitle from "./subtitle";
-import styled, { css } from "styled-components/macro";
+import styled from "styled-components/macro";
 import useTranslation from "../hooks/useTranslation";
 import ProjectCard from "./project-card";
 
@@ -40,10 +40,3 @@ export default function Projects({ images }) {
     </Wrapper>
   );
 }
-
-const colors = {
-  mim: "#F9FBFB",
-  chatify: "#FDFFF4",
-  hp: "#F1F2FA",
-  azahares: "#F9FBFB",
-};
