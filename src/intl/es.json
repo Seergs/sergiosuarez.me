@@ -46,6 +46,15 @@
           "description": "Página web para un negocio local de azahares."
         }
       }
+    },
+    "contact": {
+      "title": "Contáctame",
+      "message_1": "Gracias por querer contactarme, aquí está mi correo",
+      "message_2": "O llena el siguiente formulario para enviarme un mensaje",
+      "label_1": "NOMBRE",
+      "label_2": "CORREO",
+      "label_3": "MENSAJE",
+      "button_text": "Enviar mensaje"
     }
   }
 }

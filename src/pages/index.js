@@ -6,6 +6,7 @@ import {
   About,
   Skills,
   Projects,
+  Contact,
 } from "../components";
 import { graphql } from "gatsby";
 
@@ -18,6 +19,7 @@ const IndexPage = ({ data }) => {
       <About />
       <Skills />
       <Projects images={images} />
+      <Contact />
     </Layout>
   );
 };

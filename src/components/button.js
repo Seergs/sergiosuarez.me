@@ -7,6 +7,8 @@ const Button = styled.a`
     border-bottom: 3px solid ${props.theme.teal};
     cursor: pointer;
     transition: all 0.2s ease-out;
+    text-decoration: none;
+    display: inline-block;
 
     &:hover {
       border-bottom: 3px solid transparent;

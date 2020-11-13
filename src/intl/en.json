@@ -46,6 +46,15 @@
           "description": "A landing, page for a local business."
         }
       }
+    },
+    "contact": {
+      "title": "Contact me",
+      "message_1": "Hey, thanks for reaching out, here's my email",
+      "message_2": "Or fill out this form to send me a message",
+      "label_1": "NAME",
+      "label_2": "EMAIL",
+      "label_3": "MESSAGE",
+      "button_text": "Send message"
     }
   }
 }

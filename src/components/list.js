@@ -2,6 +2,7 @@ import React from "react";
 import styled, { css } from "styled-components/macro";
 
 const Wrapper = styled.div``;
+
 const Title = styled.h3`
   ${(props) => css`
     color: ${props.theme.headings};

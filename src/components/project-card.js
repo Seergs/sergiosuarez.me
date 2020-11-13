@@ -50,15 +50,13 @@ const ImageContainer = styled(Link)`
   align-items: center;
   display: flex;
 
+  transition: transform 0.3s ease-in-out;
   .gatsby-image-wrapper {
-    transition: transform 0.3s ease-out;
     width: 100%;
   }
 
   &:hover {
-    .gatsby-image-wrapper {
-      transform: scale(1.03);
-    }
+    transform: scale(1.01);
   }
 `;
 
