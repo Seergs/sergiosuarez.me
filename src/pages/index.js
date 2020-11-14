@@ -1,6 +1,5 @@
 import React from "react";
 import {
-  Header,
   Introduction,
   Layout,
   About,
@@ -14,7 +13,6 @@ const IndexPage = ({ data }) => {
   const images = data.allImageSharp.edges.map((edge) => edge.node.fluid);
   return (
     <Layout>
-      <Header />
       <Introduction />
       <About />
       <Skills />
