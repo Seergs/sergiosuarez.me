@@ -4,6 +4,10 @@ const mixins = {
   flexRow: css`
     display: flex;
   `,
+  flexColumn: css`
+    display: flex;
+    flex-direction: column;
+  `,
   justifyBetween: css`
     justify-content: space-between;
   `,

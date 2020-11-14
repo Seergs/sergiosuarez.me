@@ -4,6 +4,7 @@ import Subtitle from "./subtitle";
 import Text from "./text";
 import Button from "./button";
 import styled, { css } from "styled-components/macro";
+import ContactForm from "./contact-form";
 
 const Wrapper = styled.section`
   margin-top: 6rem;
@@ -21,6 +22,7 @@ export default function Contact() {
       <Text>{t("home.contact.message_1")}</Text>
       <Button href="mailto:s.suarerez@gmail.com">s.suarerez@gmail.com</Button>
       <Text>{t("home.contact.message_2")}</Text>
+      <ContactForm />
     </Wrapper>
   );
 }
