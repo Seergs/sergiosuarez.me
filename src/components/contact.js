@@ -3,7 +3,7 @@ import useTranslation from "../hooks/useTranslation";
 import Subtitle from "./subtitle";
 import Text from "./text";
 import Button from "./button";
-import styled, { css } from "styled-components/macro";
+import styled from "styled-components/macro";
 import ContactForm from "./contact-form";
 
 const Wrapper = styled.section`

@@ -5,6 +5,7 @@ const theme = {
     text: "#4A5568",
     inputOutline: "#CCCDD4",
     contactButtonText: "#f7fafc",
+    focusOutline: "#90CDF4",
   },
   dark: {
     headings: "#1A202C",
@@ -12,6 +13,7 @@ const theme = {
     text: "#4A5568",
     inputOutline: "#CCCDD4",
     contactButtonText: "#f7fafc",
+    focusOutline: "#90CDF4",
   },
 };
 

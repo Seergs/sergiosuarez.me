@@ -54,7 +54,9 @@
       "label_1": "NOMBRE",
       "label_2": "CORREO",
       "label_3": "MENSAJE",
-      "button_text": "Enviar mensaje"
+      "button_text": "Enviar mensaje",
+      "submitted_text": "Gracias",
+      "error": "Algo salió mal, mándame DM en twitter"
     }
   }
 }

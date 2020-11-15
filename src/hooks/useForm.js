@@ -1,24 +1,7 @@
-import { useState, useRef, useEffect } from "react";
-function useForm({ initialaValues = {}, onSubmit }) {
-  const [values, setValues] = useState(initialaValues);
-  const [errors, setErrors] = useState({});
-  const [touched, setTouched] = useState({});
-  const [onSubmitting, setOnSubmitting] = useState(false);
-  const [onBlur, setOnBlur] = useState(false);
-
-  const formRendered = useRef(true);
-
-  useEffect(() => {
-    if (!formRendered.current) {
-      setValues(initialaValues);
-      setErrors({});
-      setTouched({});
-      setOnSubmitting(false);
-      setOnBlur(false);
-    }
-
-    formRendered.current = false;
-  }, [initialaValues]);
+import { useState } from "react";
+function useForm({ initialValues = {}, onSubmit }) {
+  const [values, setValues] = useState(initialValues);
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
   function handleChange(e) {
     const { target } = e;
@@ -27,25 +10,17 @@ function useForm({ initialaValues = {}, onSubmit }) {
     setValues({ ...values, [name]: value });
   }
 
-  function handleBlur(e) {
-    const { target } = e;
-    const { name } = target;
-    setTouched({ ...touched, [name]: true });
-    setErrors({ ...errors });
-  }
-
   function handleSubmit(e) {
     if (e) e.preventDefault();
-    setErrors({ ...errors });
-    onSubmit({ values, errors });
+
+    onSubmit();
   }
 
   return {
     values,
-    errors,
-    touched,
+    isSubmitted,
+    setIsSubmitted,
     handleChange,
-    handleBlur,
     handleSubmit,
   };
 }

@@ -54,7 +54,9 @@
       "label_1": "NAME",
       "label_2": "EMAIL",
       "label_3": "MESSAGE",
-      "button_text": "Send message"
+      "button_text": "Send message",
+      "submitted_text": "Thanks",
+      "error": "Something went wrong, try contacting me on twitter instead"
     }
   }
 }

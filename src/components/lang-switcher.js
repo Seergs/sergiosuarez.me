@@ -7,6 +7,7 @@ import { Link as GatsbyLink } from "gatsby";
 import useClickOutside from "../hooks/useClickOutside";
 import USFlag from "../svg/en.svg";
 import SpainFlag from "../svg/es.svg";
+import { motion, AnimatePresence } from "framer-motion";
 const { flexRow, alignCenter } = mixins;
 
 const Wrapper = styled.div``;
@@ -29,7 +30,7 @@ const StyledLanguageSwitcher = styled.button`
   `}
 `;
 
-const LanguagesList = styled.ul`
+const LanguagesList = styled(motion.ul)`
   position: absolute;
   bottom: -4rem;
   list-style-type: circle;
@@ -83,16 +84,26 @@ export default function LangSwitcher() {
         {language === "EN" ? <USFlag /> : <SpainFlag />}
         {language}
         <ChevronDown />
-        {isDropdownOpen && (
-          <LanguagesList>
-            <LanguageListItem>
-              <Link to="/en">EN</Link>
-            </LanguageListItem>
-            <LanguageListItem>
-              <Link to="/es">ES</Link>
-            </LanguageListItem>
-          </LanguagesList>
-        )}
+        <AnimatePresence>
+          {isDropdownOpen && (
+            <LanguagesList
+              initial={{
+                opacity: 0,
+              }}
+              animate={{
+                opacity: 1,
+              }}
+              exit={{ opacity: 0 }}
+            >
+              <LanguageListItem>
+                <Link to="/en">EN</Link>
+              </LanguageListItem>
+              <LanguageListItem>
+                <Link to="/es">ES</Link>
+              </LanguageListItem>
+            </LanguagesList>
+          )}
+        </AnimatePresence>
       </StyledLanguageSwitcher>
     </Wrapper>
   );

@@ -1,16 +1,25 @@
-import React, { useState } from "react";
-import styled, { css } from "styled-components";
+import React, { useRef, useState } from "react";
+import styled, { css, useTheme } from "styled-components";
 import useTranslation from "../hooks/useTranslation";
 import mixins from "../theme/mixins";
-const { flexRow, flexColumn } = mixins;
+import { motion } from "framer-motion";
+import useForm from "../hooks/useForm";
+import Checkmark from "../svg/checkmark.svg";
+import Text from "./text";
+const { flexRow, alignCenter, justifyCenter, flexColumn } = mixins;
 
 const Form = styled.form`
   margin-top: 4rem;
   ${flexColumn};
+
+  ${Text} {
+    font-weight: 600;
+  }
 `;
 
 const Row = styled.div`
   ${flexRow};
+  ${alignCenter};
   gap: 1.5rem;
 `;
 
@@ -23,6 +32,7 @@ const Input = styled.input`
     height: 45px;
     border: 1px solid ${props.theme.inputOutline};
     border-radius: 3px;
+    padding: 0 10px;
     ${props.type === "text"
       ? css`
           width: 380px;
@@ -39,6 +49,7 @@ const Message = styled.textarea`
     border: 1px solid ${props.theme.inputOutline};
     resize: none;
     border-radius: 3px;
+    padding: 10px;
   `}
 `;
 
@@ -58,9 +69,8 @@ const Label = styled.label`
 
 const Error = styled.span``;
 
-const Button = styled.button`
+const Button = styled(motion.button)`
   ${(props) => css`
-    margin-top: 1.5rem;
     width: 250px;
     height: 45px;
     font-weight: 500;
@@ -70,26 +80,131 @@ const Button = styled.button`
     border-radius: 3px;
     border: 0;
     cursor: pointer;
+
+    ${flexRow};
+    ${alignCenter};
+    ${justifyCenter};
+
+    &:disabled {
+      cursor: not-allowed;
+    }
   `}
 `;
 
 export default function ContactForm() {
   const { t } = useTranslation();
+  const [error, setError] = useState(false);
+
+  const theme = useTheme();
+
+  const {
+    values,
+    isSubmitted,
+    setIsSubmitted,
+    handleChange,
+    handleSubmit,
+  } = useForm({
+    initialValues: {
+      name: "",
+      email: "",
+      message: "",
+    },
+    onSubmit,
+  });
+
+  const encode = (data) => {
+    return Object.keys(data)
+      .map(
+        (key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
+      )
+      .join();
+  };
+
+  const contactForm = useRef();
+
+  function onSubmit() {
+    const form = contactForm.current;
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({
+        "form-name": form.getAttribute("name"),
+        ...values,
+      }),
+    })
+      .then(() => {
+        setIsSubmitted(true);
+        setError(false);
+      })
+      .catch((err) => {
+        setError(true);
+      });
+  }
   return (
-    <Form>
+    <Form
+      ref={contactForm}
+      data-netlify="true"
+      name="contact-form"
+      onSubmit={handleSubmit}
+    >
       <Row>
         <Col>
           <Label htmlFor="name">{t("home.contact.label_1")}</Label>
-          <Input type="text" id="name" />
+          <Input
+            type="text"
+            id="name"
+            value={values.name}
+            onChange={handleChange}
+            name="name"
+          />
         </Col>
         <Col>
           <Label htmlFor="email">{t("home.contact.label_2")}</Label>
-          <Input type="email" id="email" />
+          <Input
+            type="email"
+            id="email"
+            name="email"
+            value={values.email}
+            onChange={handleChange}
+          />
         </Col>
       </Row>
       <Label htmlFor="message">{t("home.contact.label_3")}</Label>
-      <Message rows="15" id="message" />
-      <Button>{t("home.contact.button_text")}</Button>
+      <Message
+        rows="15"
+        id="message"
+        name="message"
+        value={values.message}
+        onChange={handleChange}
+      />
+      {error ? (
+        <Error>{t("home.contact.error")}</Error>
+      ) : (
+        <Row style={{ marginTop: "1.5rem" }}>
+          <Button
+            whileHover={
+              isSubmitted
+                ? undefined
+                : {
+                    backgroundColor: "#000000",
+                  }
+            }
+            disabled={isSubmitted}
+            animate={
+              isSubmitted
+                ? {
+                    width: "45px",
+                    borderRadius: "50%",
+                    backgroundColor: theme.teal,
+                  }
+                : undefined
+            }
+          >
+            {isSubmitted ? <Checkmark /> : t("home.contact.button_text")}
+          </Button>
+          <Text>{t("home.contact.submitted_text")}</Text>
+        </Row>
+      )}
     </Form>
   );
 }
