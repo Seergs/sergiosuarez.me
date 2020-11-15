@@ -11,10 +11,11 @@ import { graphql } from "gatsby";
 
 const IndexPage = ({ data }) => {
   const images = data.allImageSharp.edges.map((edge) => edge.node.fluid);
+  const resumeLink = data.allFile.edges[0].node.publicURL;
   return (
     <Layout>
       <Introduction />
-      <About />
+      <About resumeLink={resumeLink} />
       <Skills />
       <Projects images={images} />
       <Contact />
@@ -33,6 +34,13 @@ export const pageQuery = graphql`
             originalName
             ...GatsbyImageSharpFluid
           }
+        }
+      }
+    }
+    allFile(filter: { base: { eq: "resume.pdf" } }) {
+      edges {
+        node {
+          publicURL
         }
       }
     }

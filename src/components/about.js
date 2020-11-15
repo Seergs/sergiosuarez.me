@@ -12,14 +12,16 @@ const Wrapper = styled.div`
   }
 `;
 
-export default function About() {
+export default function About({ resumeLink }) {
   const { t } = useTranslation();
   return (
     <Wrapper>
       <Subtitle>{t("home.about.subtitle")}</Subtitle>
       <Text>{t("home.about.text.1")}</Text>
       <Text>{t("home.about.text.2")}</Text>
-      <Button>{t("home.about.resume")}</Button>
+      <Button href={resumeLink} download="Sergio Suárez">
+        {t("home.about.resume")}
+      </Button>
     </Wrapper>
   );
 }
