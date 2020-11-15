@@ -38,6 +38,7 @@ const Message = styled.textarea`
     width: 700px;
     border: 1px solid ${props.theme.inputOutline};
     resize: none;
+    border-radius: 3px;
   `}
 `;
 

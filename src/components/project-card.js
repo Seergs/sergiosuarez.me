@@ -5,6 +5,7 @@ import Text from "./text";
 import Button from "./link";
 import { Link } from "gatsby";
 import useTranslation from "../hooks/useTranslation";
+import { useLocation } from "@reach/router";
 
 const Card = styled.li`
   ${(props) => css`
@@ -72,17 +73,18 @@ const ProjectName = styled(Link)`
 
 export default function ProjectCard({ name, image }) {
   const { t } = useTranslation();
+  const { pathname } = useLocation();
 
   return (
     <Card>
-      <ImageContainer to={`/projects/${name}`}>
+      <ImageContainer to={`${pathname}/projects/${name}`}>
         <Image fluid={image} />
       </ImageContainer>
-      <ProjectName to={`/projects/${name}`}>
+      <ProjectName to={`${pathname}/projects/${name}`}>
         {t(`home.projects_section.projects.${name}.name`)}
       </ProjectName>
       <Text>{t(`home.projects_section.projects.${name}.description`)}</Text>
-      <Link to={`/projects/${name}`}>
+      <Link to={`${pathname}/projects/${name}`}>
         <Button>{t(`home.projects_section.link`)}</Button>
       </Link>
     </Card>
