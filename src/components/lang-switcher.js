@@ -5,26 +5,33 @@ import ChevronDown from "../svg/chevron-down.svg";
 import mixins from "../theme/mixins";
 import { Link as GatsbyLink } from "gatsby";
 import useClickOutside from "../hooks/useClickOutside";
+import USFlag from "../svg/en.svg";
+import SpainFlag from "../svg/es.svg";
 const { flexRow, alignCenter } = mixins;
 
-const Wrapper = styled.div`
-  position: relative;
-`;
+const Wrapper = styled.div``;
 
 const StyledLanguageSwitcher = styled.button`
   ${(props) => css`
     color: ${props.theme.headings};
+    position: relative;
     font-weight: 600;
     background: transparent;
     border: 0;
     ${flexRow};
     ${alignCenter};
     cursor: pointer;
+
+    svg:first-child {
+      width: 20px;
+      margin-right: 8px;
+    }
   `}
 `;
 
 const LanguagesList = styled.ul`
   position: absolute;
+  bottom: -4rem;
   list-style-type: circle;
 `;
 
@@ -64,7 +71,7 @@ export default function LangSwitcher() {
 
   const ref = useRef();
 
-  useClickOutside(ref, onClick);
+  useClickOutside(ref, () => setIsDropdowOpen(false));
 
   function onClick() {
     setIsDropdowOpen((prev) => !prev);
@@ -73,19 +80,20 @@ export default function LangSwitcher() {
   return (
     <Wrapper ref={ref}>
       <StyledLanguageSwitcher onClick={onClick}>
+        {language === "EN" ? <USFlag /> : <SpainFlag />}
         {language}
         <ChevronDown />
+        {isDropdownOpen && (
+          <LanguagesList>
+            <LanguageListItem>
+              <Link to="/en">EN</Link>
+            </LanguageListItem>
+            <LanguageListItem>
+              <Link to="/es">ES</Link>
+            </LanguageListItem>
+          </LanguagesList>
+        )}
       </StyledLanguageSwitcher>
-      {isDropdownOpen && (
-        <LanguagesList>
-          <LanguageListItem>
-            <Link to="/en">EN</Link>
-          </LanguageListItem>
-          <LanguageListItem>
-            <Link to="/es">ES</Link>
-          </LanguageListItem>
-        </LanguagesList>
-      )}
     </Wrapper>
   );
 }
