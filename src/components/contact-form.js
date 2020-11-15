@@ -74,7 +74,6 @@ const Button = styled(motion.button)`
     width: 250px;
     height: 45px;
     font-weight: 500;
-    background-color: ${props.theme.headings};
     color: ${props.theme.contactButtonText};
     font-size: 0.9rem;
     border-radius: 3px;
@@ -182,29 +181,31 @@ export default function ContactForm() {
       ) : (
         <Row style={{ marginTop: "1.5rem" }}>
           <Button
-            whileHover={
-              isSubmitted
-                ? undefined
-                : {
-                    backgroundColor: "#000000",
-                  }
-            }
+            whileHover={isSubmitted ? undefined : animations.button.hover}
             disabled={isSubmitted}
             animate={
               isSubmitted
-                ? {
-                    width: "45px",
-                    borderRadius: "50%",
-                    backgroundColor: theme.teal,
-                  }
-                : undefined
+                ? { ...animations.button.animate, backgroundColor: theme.teal }
+                : { backgroundColor: theme.headings }
             }
           >
             {isSubmitted ? <Checkmark /> : t("home.contact.button_text")}
           </Button>
-          <Text>{t("home.contact.submitted_text")}</Text>
+          {isSubmitted && <Text>{t("home.contact.submitted_text")}</Text>}
         </Row>
       )}
     </Form>
   );
 }
+
+const animations = {
+  button: {
+    hover: {
+      backgroundColor: "#000000",
+    },
+    animate: {
+      width: "45px",
+      borderRadius: "50%",
+    },
+  },
+};
