@@ -1,6 +1,5 @@
 import React from "react";
 import { Layout, Title, Link as Button, Text } from "../../components";
-import { Link } from "gatsby";
 import styled, { css } from "styled-components/macro";
 import useTranslation from "../../hooks/useTranslation";
 
@@ -10,6 +9,8 @@ const StyledMIM = styled.div`
   }
 `;
 
+const Description = styled.div``;
+
 export default function MIM() {
   const { t } = useTranslation();
 
@@ -17,15 +18,15 @@ export default function MIM() {
     <Layout>
       <StyledMIM>
         <Title>Master Incident Manager</Title>
-        <div>
+        <Description>
           <Text>{t("mim.description")}</Text>
           <a
             href="https://master-incident-management.netlify.app/"
             rel="noopener"
           >
-            <Button>{t("mim.website")}</Button>
+            <Button isPrimaryColor={true}>{t("mim.website")}</Button>
           </a>
-        </div>
+        </Description>
       </StyledMIM>
     </Layout>
   );
