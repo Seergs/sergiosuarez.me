@@ -1,15 +1,24 @@
 import React from "react";
-import { Layout, Title, Link as Button, Text } from "../../components";
+import {
+  Layout,
+  Title,
+  MIMDescription,
+  StackCollapsed,
+  Motivation,
+} from "../../components";
 import styled, { css } from "styled-components/macro";
 import useTranslation from "../../hooks/useTranslation";
+import mixins from "../../theme/mixins";
 
-const StyledMIM = styled.div`
-  ${Title} {
-    margin-bottom: 2rem;
-  }
+const { flexRow, justifyBetween } = mixins;
+
+const StyledMIM = styled.div``;
+
+const Row = styled.div`
+  ${flexRow};
+  ${justifyBetween};
+  margin: 4rem 0;
 `;
-
-const Description = styled.div``;
 
 export default function MIM() {
   const { t } = useTranslation();
@@ -18,15 +27,13 @@ export default function MIM() {
     <Layout>
       <StyledMIM>
         <Title>Master Incident Manager</Title>
-        <Description>
-          <Text>{t("mim.description")}</Text>
-          <a
-            href="https://master-incident-management.netlify.app/"
-            rel="noopener"
-          >
-            <Button isPrimaryColor={true}>{t("mim.website")}</Button>
-          </a>
-        </Description>
+        <Row>
+          <MIMDescription />
+          <StackCollapsed
+            stack={["React", "Flask", "Azure", "MongoDB", "Netlify", "Heroku"]}
+          />
+        </Row>
+        <Motivation text={t("project_page.mim.motivation")} />
       </StyledMIM>
     </Layout>
   );

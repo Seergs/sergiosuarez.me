@@ -10,3 +10,6 @@ export { default as LangSwitcher } from "./lang-switcher";
 export { default as Title } from "./title";
 export { default as Link } from "./link";
 export { default as Text } from "./text";
+export { default as MIMDescription } from "./project/mim/description";
+export { default as StackCollapsed } from "./project/stack";
+export { default as Motivation } from "./project/motivation";
