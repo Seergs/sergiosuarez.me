@@ -31,7 +31,7 @@
       "projects": {
         "mim": {
           "name": "Master Incident Manager",
-          "description": "An issue tracker made to help CISCO Supply Chain to keep track, analyzing and providing solutions for incidents inside the company."
+          "description": "An issue tracker made to help Cisco Supply Chain to keep track, analyzing and providing solutions for incidents inside the company."
         },
         "chatify": {
           "name": "Chatify",
@@ -57,6 +57,33 @@
       "button_text": "Send message",
       "submitted_text": "Thanks! I'll try to reply as soon as posible",
       "error": "Something went wrong, try contacting me on twitter instead"
+    }
+  },
+  "mim": {
+    "description": "This was part of the Cisco Mexico University Challenge where I worked with a team to build an incident tracker for the Supply Chain Area, this would allow employees to log issues and analize possible solutions for new incidents based on the issues history.",
+    "website": "LIVE SITE",
+    "stack": {
+      "short_title": "Tech Stack",
+      "long_title": "Stack explanation",
+      "react": "The project had to be an interactive platform so we had to choose a frontend framework to make things easy. We ended up using React because some of the team members had already worked with it in the past and because it provides a lot of scalability which was one of the requirements.",
+      "flask": "For the backend we chose Flask. We would build machine learning algorithms to provide possible solutions for new incidents, so the best option was to use Python. However the team was not very experienced in this language so Flask looked as the most easy framework to use and learn.",
+      "azure": "As the project continued, we realized we required a file storage platform since users needed to be able to upload files like logs or screenshots. After looking into the different options, we chose Microsoft Azure Blob Storage for its easy integration with Flask."
+    },
+    "motivation": {
+      "title": "Motivation",
+      "text": "Cisco's products are manufactured by 3rd party companies across the globe. These factories rely greatly on technology solutions, each enabled by a separate Cisco group, and hence the visibility on current activities, planned changes, and how to react in case of problems is difficult for Cisco partners to piece together."
+    },
+    "solution": {
+      "title": "Solution",
+      "text": "The final product was the Master Incident Manager, an issue tracker where Cisco partners have a central place for researching and quantifying the current incidents and root causes. This allows users to log, monitor and resolve issues. The project considers the following:",
+      "list": {
+        "1": "Its easy to research on issues, resolutions and sites",
+        "2": "Its easy to use and understand regardless of global language differences",
+        "3": "The project is able to categorize issues based on priorities",
+        "4": "The platform implements role-based access",
+        "5": "Considers data and network security",
+        "6": "Helps to quickly identify root cases, whether they are software of hardware issues"
+      }
     }
   }
 }

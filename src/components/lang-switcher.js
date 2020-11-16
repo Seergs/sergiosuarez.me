@@ -8,6 +8,7 @@ import useClickOutside from "../hooks/useClickOutside";
 import USFlag from "../svg/en.svg";
 import SpainFlag from "../svg/es.svg";
 import { motion, AnimatePresence } from "framer-motion";
+import { useLocation } from "@reach/router";
 const { flexRow, alignCenter } = mixins;
 
 const Wrapper = styled.div``;
@@ -69,6 +70,7 @@ const Link = styled(GatsbyLink)`
 export default function LangSwitcher() {
   const [isDropdownOpen, setIsDropdowOpen] = useState(false);
   const language = useLanguage();
+  const { pathname } = useLocation();
 
   const ref = useRef();
 
@@ -77,6 +79,18 @@ export default function LangSwitcher() {
   function onClick() {
     setIsDropdowOpen((prev) => !prev);
   }
+
+  const createLink = (key) => {
+    if (pathname.includes("en") && key === "en") {
+      return pathname;
+    } else if (pathname.includes("en") && key === "es") {
+      return pathname.replace("en", "es");
+    } else if (pathname.includes("es") && key === "es") {
+      return pathname;
+    } else if (pathname.includes("es") && key === "en") {
+      return pathname.replace("es", "en");
+    }
+  };
 
   return (
     <Wrapper ref={ref}>
@@ -96,10 +110,10 @@ export default function LangSwitcher() {
               exit={{ opacity: 0 }}
             >
               <LanguageListItem>
-                <Link to="/en">EN</Link>
+                <Link to={createLink("en")}>EN</Link>
               </LanguageListItem>
               <LanguageListItem>
-                <Link to="/es">ES</Link>
+                <Link to={createLink("es")}>ES</Link>
               </LanguageListItem>
             </LanguagesList>
           )}

@@ -7,3 +7,6 @@ export { default as Projects } from "./projects";
 export { default as Contact } from "./contact";
 export { default as Footer } from "./footer";
 export { default as LangSwitcher } from "./lang-switcher";
+export { default as Title } from "./title";
+export { default as Link } from "./link";
+export { default as Text } from "./text";

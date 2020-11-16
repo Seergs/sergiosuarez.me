@@ -31,7 +31,7 @@
       "projects": {
         "mim": {
           "name": "Master Incident Manager",
-          "description": "Administrador de incidentes para ayudar a CISCO Supply Chain a llevar un registro, analizar y proveer soluciones de incidentes dentro de la compañia."
+          "description": "Administrador de incidentes para ayudar a Cisco Supply Chain a llevar un registro, analizar y proveer soluciones de incidentes dentro de la compañia."
         },
         "chatify": {
           "name": "Chatify",
@@ -57,6 +57,33 @@
       "button_text": "Enviar mensaje",
       "submitted_text": "Gracias! Intentaré responder tan pronto como pueda",
       "error": "Algo salió mal, mándame DM en twitter"
+    }
+  },
+  "mim": {
+    "description": "Este proyecto fue parte del Cisco Mexico University Challenge donde trabaje con un equipo para crear un administrador de incidentes para el área de Supply Chain. Este ayudaría a que los empleados pudieran llevar seguimiento de los errores y analizar las posibles soluciones para los nuevos incidentes en base al historial de estos.",
+    "website": "SITIO WEB",
+    "stack": {
+      "short_title": "Tecnologías",
+      "long_title": "Explicación de las tecnologías elegidas",
+      "react": "El proyecto debía ser una plataforma interactiva así que se tuvo que elegir un framework para el frontend. Terminamos usando React porque varios de los miembros del equipo habían trabajado con el anteriormente. Además React nos ofrece mucha escalabilidad, la cual era un requerimiento para el proyecto.",
+      "flask": "Para el backend escogimos Flask. Implementaríamos algoritmos de machine learning para proveer soluciones a los nuevos incidentes, por lo que la mejor opción era usar Python, sin embargo el equipo no tenía mucha experiencia con este, por lo que Flask era la mejor opción pues es fácil de usar y aprender.",
+      "azure": "A medio camino del proyecto, nos dimos cuenta de que se requería una plataforma para guardar archivos, pues los usuarios tendrían la opción de subir reportes o capturas de pantalla. Después de analizar las diferentes opciones nos decidimos por Microsoft Azure Blob Storage por su fácil integración con Flask."
+    },
+    "motivation": {
+      "title": "Motivación",
+      "text": "Los productos de Cisco están creados por compañías de terceros a través del mundo. Estas empresas se rigen por diferentes soluciones tecnológicas, cada una de estas creadas por los diferentes grupos de Cisco, por lo que la visibilidad de las actividades, los planes de cambios y el cómo reaccionar en caso de problemas son difíciles de unificar para los partners de Cisco"
+    },
+    "solution": {
+      "title": "Solución",
+      "text": "El producto final es el Master Incident Manager, un administrador de incidentes donde los partners de Cisco tienen un sitio central para analizar y cuantificar los problemas actuales y las causas raíces. Este ayuda a los usuarios a llevar un registro, monitorear y resolver incidentes. Este proyecto toma las siguientes consideraciones:",
+      "list": {
+        "1": "Es fácil ver los incidentes y su resolución",
+        "2": "Es fácil de usar y entender sin importar de las diferencias de idioma",
+        "3": "El sistema es capaz de categorizar los incidentes en base a prioridades",
+        "4": "La plataforma cuenta con acceso en base a roles",
+        "5": "Considera seguridad de la información y protección de red",
+        "6": "Ayuda a identificar rápidamente las causas raíz, ya sea de hardware o software"
+      }
     }
   }
 }
