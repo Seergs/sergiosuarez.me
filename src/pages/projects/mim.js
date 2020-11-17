@@ -9,6 +9,7 @@ import {
   ReactIcon,
   Solution,
   Features,
+  Images,
 } from "../../components";
 import styled, { css } from "styled-components/macro";
 import useTranslation from "../../hooks/useTranslation";
@@ -25,8 +26,9 @@ const Row = styled.div`
   margin: 4rem 0;
 `;
 
-export default function MIM() {
+export default function MIM({ data }) {
   const { t } = useTranslation();
+  const images = data.allImageSharp.edges.map((edge) => edge.node.fluid);
 
   function features() {
     const f = [];
@@ -53,10 +55,26 @@ export default function MIM() {
         <StackExplanation stack={stack} />
         <Solution project="mim" />
         <Features features={features()} />
+        <Images images={images} />
       </StyledMIM>
     </Layout>
   );
 }
+
+export const pageQuery = graphql`
+  query MIMPageQuery {
+    allImageSharp(filter: { fluid: { originalName: { regex: "/mim/" } } }) {
+      edges {
+        node {
+          fluid(maxWidth: 1200, quality: 100) {
+            originalName
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
+  }
+`;
 
 const stack = [
   {

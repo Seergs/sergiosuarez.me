@@ -17,3 +17,4 @@ export { default as StackExplanation } from "./project/stack-explanation";
 export { default as ReactIcon } from "./react-icon";
 export { default as Solution } from "./project/solution";
 export { default as Features } from "./project/features";
+export { default as Images } from "./project/images";
