@@ -1,6 +1,6 @@
 const generateAltTexts = (images) => {
   let altTexts = {};
-  images.map((image) => {
+  for (const image of images) {
     if (image.originalName.includes("mim")) {
       altTexts["mim"] = "Master Incident Manager website";
     } else if (image.originalName.includes("hp")) {
@@ -10,7 +10,7 @@ const generateAltTexts = (images) => {
     } else if (image.originalName.includes("chatify")) {
       altTexts["chatify"] = "Chatify website";
     }
-  });
+  }
 
   return altTexts;
 };

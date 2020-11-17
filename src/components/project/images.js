@@ -32,9 +32,9 @@ export default function Images({ images, projectName }) {
   const altTexts = generateAltTexts(images);
   return (
     <ImagesContainer isTwoRows={projectName === "chatify"}>
-      {images.map((image) => {
+      {images.map((image, i) => {
         return (
-          <ImageWrapper>
+          <ImageWrapper key={`altTexts.${projectName}.${i}`}>
             <Image fluid={image} alt={altTexts[projectName]} />
           </ImageWrapper>
         );

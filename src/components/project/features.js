@@ -29,8 +29,8 @@ const ListItem = styled.li`
 export default function Features({ features }) {
   return (
     <StyledFeatures>
-      {features.map((feature) => (
-        <ListItem>
+      {features.map((feature, i) => (
+        <ListItem key={i}>
           <Text>{feature}</Text>
         </ListItem>
       ))}

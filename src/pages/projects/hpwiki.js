@@ -5,7 +5,6 @@ import {
   StackCollapsed,
   Motivation,
   StackExplanation,
-  ReactIcon,
   Solution,
   Features,
   Images,
@@ -15,8 +14,7 @@ import {
 import styled from "styled-components/macro";
 import useTranslation from "../../hooks/useTranslation";
 import mixins from "../../theme/mixins";
-import NodeIcon from "../../svg/node.svg";
-import SocketIcon from "../../svg/socketio.svg";
+import GatsbyIcon from "../../svg/gatsby.svg";
 import { graphql } from "gatsby";
 const { flexRow, justifyBetween } = mixins;
 
@@ -35,7 +33,7 @@ export default function Chatify({ data }) {
   function features() {
     const f = [];
     for (let i = 0; i < 3; ++i) {
-      f.push(t(`project_page.chatify.solution.list.${i + 1}`));
+      f.push(t(`project_page.hp.solution.list.${i + 1}`));
     }
 
     return f;
@@ -44,41 +42,33 @@ export default function Chatify({ data }) {
   return (
     <Layout>
       <StyledMIM>
-        <Title>Chatify</Title>
+        <Title>Harry Potter wiki</Title>
         <Row>
-          <Description projectName="chatify">
+          <Description projectName="hp">
             <Links
-              live="https://chatifywith.netlify.app/"
-              serverRepo="https://github.com/Seergs/chatify-server"
-              clientRepo="https://github.com/Seergs/chatify-client"
+              live="https://hpwiki.netlify.app/"
+              clientRepo="https://github.com/Seergs/harrypotter-wiki"
             />
           </Description>
           <StackCollapsed
-            stack={[
-              "React",
-              "NodeJs",
-              "socket.io",
-              "TailwindCSS",
-              "MongoDB",
-              "Heroku",
-            ]}
+            stack={["Gatsby", "Netlify", "styled-components", "framer-motion"]}
           />
         </Row>
         <Row>
-          <Motivation text={t("project_page.chatify.motivation")} />
+          <Motivation text={t("project_page.hp.motivation")} />
         </Row>
         <StackExplanation stack={stack} />
-        <Solution project="chatify" />
+        <Solution project="hp" />
         <Features features={features()} />
-        <Images images={images} projectName="chatify" />
+        <Images images={images} projectName="hp" />
       </StyledMIM>
     </Layout>
   );
 }
 
 export const pageQuery = graphql`
-  query ChatifyPageQuery {
-    allImageSharp(filter: { fluid: { originalName: { regex: "/chatify/" } } }) {
+  query HpWikiPageQuery {
+    allImageSharp(filter: { fluid: { originalName: { regex: "/hp/" } } }) {
       edges {
         node {
           fluid(maxWidth: 1200, quality: 100) {
@@ -93,18 +83,8 @@ export const pageQuery = graphql`
 
 const stack = [
   {
-    name: "React",
-    textId: "project_page.chatify.stack.react",
-    Icon: ReactIcon,
-  },
-  {
-    name: "socket.io",
-    textId: "project_page.chatify.stack.socket_io",
-    Icon: SocketIcon,
-  },
-  {
-    name: "NodeJs",
-    textId: "project_page.chatify.stack.node",
-    Icon: NodeIcon,
+    name: "Gatsby",
+    textId: "project_page.hp.stack.gatsby",
+    Icon: GatsbyIcon,
   },
 ];

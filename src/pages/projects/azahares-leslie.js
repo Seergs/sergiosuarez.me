@@ -28,14 +28,14 @@ const Row = styled.div`
   margin: 4rem 0;
 `;
 
-export default function Chatify({ data }) {
+export default function AzaharesLeslie({ data }) {
   const { t } = useTranslation();
   const images = data.allImageSharp.edges.map((edge) => edge.node.fluid);
 
   function features() {
     const f = [];
     for (let i = 0; i < 3; ++i) {
-      f.push(t(`project_page.chatify.solution.list.${i + 1}`));
+      f.push(t(`project_page.azahares.solution.list.${i + 1}`));
     }
 
     return f;
@@ -44,41 +44,32 @@ export default function Chatify({ data }) {
   return (
     <Layout>
       <StyledMIM>
-        <Title>Chatify</Title>
+        <Title>Azahares Leslie</Title>
         <Row>
-          <Description projectName="chatify">
-            <Links
-              live="https://chatifywith.netlify.app/"
-              serverRepo="https://github.com/Seergs/chatify-server"
-              clientRepo="https://github.com/Seergs/chatify-client"
-            />
+          <Description projectName="azahares">
+            <Links live="https://azaharesleslie.netlify.app/" />
           </Description>
           <StackCollapsed
-            stack={[
-              "React",
-              "NodeJs",
-              "socket.io",
-              "TailwindCSS",
-              "MongoDB",
-              "Heroku",
-            ]}
+            stack={["React", "Netlify", "styled-components", "framer-motion"]}
           />
         </Row>
         <Row>
-          <Motivation text={t("project_page.chatify.motivation")} />
+          <Motivation text={t("project_page.azahares.motivation")} />
         </Row>
         <StackExplanation stack={stack} />
-        <Solution project="chatify" />
+        <Solution project="azahares" />
         <Features features={features()} />
-        <Images images={images} projectName="chatify" />
+        <Images images={images} projectName="azahares" />
       </StyledMIM>
     </Layout>
   );
 }
 
 export const pageQuery = graphql`
-  query ChatifyPageQuery {
-    allImageSharp(filter: { fluid: { originalName: { regex: "/chatify/" } } }) {
+  query AzaharesPageQuery {
+    allImageSharp(
+      filter: { fluid: { originalName: { regex: "/azahares/" } } }
+    ) {
       edges {
         node {
           fluid(maxWidth: 1200, quality: 100) {
@@ -94,17 +85,7 @@ export const pageQuery = graphql`
 const stack = [
   {
     name: "React",
-    textId: "project_page.chatify.stack.react",
+    textId: "project_page.azahares.stack.react",
     Icon: ReactIcon,
-  },
-  {
-    name: "socket.io",
-    textId: "project_page.chatify.stack.socket_io",
-    Icon: SocketIcon,
-  },
-  {
-    name: "NodeJs",
-    textId: "project_page.chatify.stack.node",
-    Icon: NodeIcon,
   },
 ];

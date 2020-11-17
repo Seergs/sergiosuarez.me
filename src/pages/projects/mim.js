@@ -12,7 +12,7 @@ import {
   Description,
   Links,
 } from "../../components";
-import styled, { css } from "styled-components/macro";
+import styled from "styled-components/macro";
 import useTranslation from "../../hooks/useTranslation";
 import mixins from "../../theme/mixins";
 import FlaskIcon from "../../svg/flask.svg";

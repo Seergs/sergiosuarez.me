@@ -101,6 +101,37 @@
           "3": "Provides an emoji parser, so if you send ':D' you will see 😀"
         }
       }
+    },
+    "hp": {
+      "description": "A fun website for all Potterheads out there where you can discover fun facts, see info about the Hogwarts Houses and even discover what house you belong to.",
+      "stack": {
+        "gatsby": "I chose Gatsby for this static site since it is one of the best frameworks for React and helps you build blazing flast websites."
+      },
+      "motivation": "I'm a Potterhead myself so it was a good opotunity to show it off and look into Gatsby since I've seen a lot of people talk about how you can build super fast static websites with it, I tried it out and I had an amazing experience.",
+      "solution": {
+        "text": "The final product is a PWA with offline mode where you can find info about spells used in the Harry Potter movies, the characters and some fun facts. It also provides the following features:",
+        "list": {
+          "1": "Modal components with the info of the Hogwarts Houses",
+          "2": "A place to discover the house you belong to",
+          "3": "A page with all the characters and spells from the Wizarding World displayed in an awesome Accordion component",
+          "4": "A page to discover some fun fact about the Harry Potter universe"
+        }
+      }
+    },
+    "azahares": {
+      "description": "A landing page made for a local business to showcase what they do.",
+      "stack": {
+        "react": "Honestly this was not the best decision, I could've built it with plain HTML/CSS. Also at the moment I didn't know Gatsby."
+      },
+      "motivation": "A local business needed a website so clients could see what they do and what products they offer.",
+      "solution": {
+        "text": "The final product is a website to showcase the products the company offers and the information about it so that clients can contact them. This webpage provides:",
+        "list": {
+          "1": "Cool animations like image fade-in",
+          "2": "A nice modern and elegant design",
+          "3": "A gallery of the products offered by the business"
+        }
+      }
     }
   }
 }

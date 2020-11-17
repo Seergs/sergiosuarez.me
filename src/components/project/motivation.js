@@ -1,7 +1,7 @@
 import React from "react";
 import Subtitle from "../subtitle";
 import Text from "../text";
-import styled, { css } from "styled-components/macro";
+import styled from "styled-components/macro";
 import useTranslation from "../../hooks/useTranslation";
 
 const StyledMotivation = styled.section``;

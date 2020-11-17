@@ -20,17 +20,17 @@ export default function Links({
   return (
     <StyledLinks>
       {serverRepo && (
-        <a href={serverRepo} target="_blank" rel="noopener">
+        <a href={serverRepo} target="_blank" rel="noreferrer">
           <Link>Server repo</Link>
         </a>
       )}
       {clientRepo && (
-        <a href={clientRepo} target="_blank" rel="noopener">
+        <a href={clientRepo} target="_blank" rel="noreferrer">
           <Link>Client repo</Link>
         </a>
       )}
       {live && (
-        <a href={live} target="_blank" rel="noopener">
+        <a href={live} target="_blank" rel="noreferrer">
           <Link isPrimaryColor={true}>{t(`project_page.website`)}</Link>
         </a>
       )}

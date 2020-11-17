@@ -101,6 +101,37 @@
           "3": "Un emoji parser, así que si envías ':D' lo que verás será 😀"
         }
       }
+    },
+    "hp": {
+      "description": "Una divertida página web para todos los Potterheads donde puedes ver datos curiosos, la información de las casas de Hogwarts e incluso descubrir a cuál perteneces.",
+      "stack": {
+        "gatsby": "Decidí usar Gatsby para este static site porque es uno de los mejores frameworks para React y ayuda a crear websites súper rápidos."
+      },
+      "motivation": "Soy un Potterhead así que pensé que era una buena oportunidad de mostrarlo y de probar Gatsby, pues he escuchado a mucha gente decir lo rápidas que pueden ser las páginas hechas de estas manera. Lo probé, quedé fascinado y con un buen sabor de boca.",
+      "solution": {
+        "text": "El producto final es una PWA que cuenta con un modo offline donde puedes ver información acerca de los hechizos usados en las películas de Harry Potter, los personajes y algunos datos curiosos. También provee las siguientes características:",
+        "list": {
+          "1": "Un componente de Modal con la información de cada una de las casas de Hogwarts",
+          "2": "Un lugar donde puedes descubrir a qué casa perteneces",
+          "3": "Una página con todos los personajes y los hechizos del mundo mágico mostrados en un cool  componente de Accordion",
+          "4": "Una página para descubrir datos curiosos sobre el universo de Harry Potter"
+        }
+      }
+    },
+    "azahares": {
+      "description": "Una landing page para un negocio local que muestre lo que hacen.",
+      "stack": {
+        "react": "Honestamente esta no fue la mejor decisión. Se podría haber creado con HTML/CSS. También en ese momento no conocía Gatsby."
+      },
+      "motivation": "Un negocio local necesitaba una página web para que los clientes vieran qué hacían y qué productos ofrecían.",
+      "solution": {
+        "text": "El producto final es una página web donde se muestra qué ofrece el negocio y la información acerca de ellos para que se facilite la comunicación con los clientes. Esta página provee:",
+        "list": {
+          "1": "Animaciones cool como fade-in en las imágenes ",
+          "2": "Un diseño elegante y moderno",
+          "3": "Una galería de productos ofrecidos por el negocio"
+        }
+      }
     }
   }
 }
