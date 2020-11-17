@@ -22,19 +22,19 @@ export default function Projects({ images }) {
       <Container>
         <ProjectCard
           name={"mim"}
-          image={images.find((i) => i.originalName === "mim-home.png")}
+          image={images.find((i) => i.originalName.includes("mim"))}
         />
         <ProjectCard
           name={"chatify"}
-          image={images.find((i) => i.originalName === "chatify-home.png")}
+          image={images.find((i) => i.originalName.includes("chatify"))}
         />
         <ProjectCard
           name={"hpwiki"}
-          image={images.find((i) => i.originalName === "hp-home.png")}
+          image={images.find((i) => i.originalName.includes("hp"))}
         />
         <ProjectCard
           name={"azahares-leslie"}
-          image={images.find((i) => i.originalName === "azahares-home.png")}
+          image={images.find((i) => i.originalName.includes("azahares"))}
         />
       </Container>
     </Wrapper>

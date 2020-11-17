@@ -27,7 +27,7 @@ export default IndexPage;
 
 export const pageQuery = graphql`
   query IndexPageQuery {
-    allImageSharp {
+    allImageSharp(filter: { fluid: { originalName: { regex: "/home/" } } }) {
       edges {
         node {
           fluid(maxWidth: 1200, quality: 100) {
