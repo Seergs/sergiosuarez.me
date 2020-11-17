@@ -5,11 +5,14 @@ import {
   MIMDescription,
   StackCollapsed,
   Motivation,
+  StackExplanation,
+  ReactIcon,
 } from "../../components";
 import styled, { css } from "styled-components/macro";
 import useTranslation from "../../hooks/useTranslation";
 import mixins from "../../theme/mixins";
-
+import FlaskIcon from "../../svg/flask.svg";
+import AzureIcon from "../../svg/azure.svg";
 const { flexRow, justifyBetween } = mixins;
 
 const StyledMIM = styled.div``;
@@ -33,8 +36,29 @@ export default function MIM() {
             stack={["React", "Flask", "Azure", "MongoDB", "Netlify", "Heroku"]}
           />
         </Row>
-        <Motivation text={t("project_page.mim.motivation")} />
+        <Row>
+          <Motivation text={t("project_page.mim.motivation")} />
+        </Row>
+        <StackExplanation stack={stack} />
       </StyledMIM>
     </Layout>
   );
 }
+
+const stack = [
+  {
+    name: "React",
+    textId: "project_page.mim.stack.react",
+    Icon: ReactIcon,
+  },
+  {
+    name: "Flask",
+    textId: "project_page.mim.stack.flask",
+    Icon: FlaskIcon,
+  },
+  {
+    name: "Azure",
+    textId: "project_page.mim.stack.azure",
+    Icon: AzureIcon,
+  },
+];

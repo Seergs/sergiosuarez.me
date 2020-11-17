@@ -13,3 +13,5 @@ export { default as Text } from "./text";
 export { default as MIMDescription } from "./project/mim/description";
 export { default as StackCollapsed } from "./project/stack";
 export { default as Motivation } from "./project/motivation";
+export { default as StackExplanation } from "./project/stack-explanation";
+export { default as ReactIcon } from "./react-icon";
