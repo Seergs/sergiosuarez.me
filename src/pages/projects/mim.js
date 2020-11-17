@@ -55,7 +55,7 @@ export default function MIM({ data }) {
         <StackExplanation stack={stack} />
         <Solution project="mim" />
         <Features features={features()} />
-        <Images images={images} />
+        <Images images={images} projectName="mim" />
       </StyledMIM>
     </Layout>
   );

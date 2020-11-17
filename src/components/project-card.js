@@ -81,7 +81,7 @@ export default function ProjectCard({ name, image }) {
   return (
     <Card>
       <ImageContainer to={link}>
-        <Image fluid={image} />
+        <Image fluid={image.src} alt={image.alt} />
       </ImageContainer>
       <ProjectName to={link}>
         {t(`home.projects_section.projects.${name}.name`)}

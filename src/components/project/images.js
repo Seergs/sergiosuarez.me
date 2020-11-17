@@ -1,6 +1,7 @@
 import React from "react";
 import styled, { css } from "styled-components/macro";
 import Image from "gatsby-image";
+import generateAltTexts from "../../utils/generateAltTexts";
 
 const ImagesContainer = styled.section`
   display: grid;
@@ -21,14 +22,17 @@ const ImageWrapper = styled.div`
   }
 `;
 
-export default function Images({ images }) {
+export default function Images({ images, projectName }) {
+  const altTexts = generateAltTexts(images);
   return (
     <ImagesContainer>
-      {images.map((image) => (
-        <ImageWrapper>
-          <Image fluid={image} />
-        </ImageWrapper>
-      ))}
+      {images.map((image) => {
+        return (
+          <ImageWrapper>
+            <Image fluid={image} alt={altTexts[projectName]} />
+          </ImageWrapper>
+        );
+      })}
     </ImagesContainer>
   );
 }
