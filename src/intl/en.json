@@ -64,9 +64,9 @@
     "stack_explanation_title": "Stack explanation",
     "motivation_title": "Motivation",
     "solution_title": "Solution",
+    "website": "LIVE SITE",
     "mim": {
       "description": "This was part of the Cisco Mexico University Challenge where I worked with a team to build an incident tracker for the Supply Chain Area, this would allow employees to log issues and analize possible solutions for new incidents based on the issues history.",
-      "website": "LIVE SITE",
       "stack": {
         "react": "The project had to be an interactive platform so we had to choose a frontend framework to make things easy. We ended up using React because some of the team members had already worked with it in the past and because it provides a lot of scalability which was one of the requirements.",
         "flask": "For the backend we chose Flask. We would build machine learning algorithms to provide possible solutions for new incidents, so the best option was to use Python. However the team was not very experienced in this language so Flask looked as the most easy framework to use and learn.",
@@ -82,6 +82,23 @@
           "4": "The platform implements role-based access",
           "5": "Considers data and network security",
           "6": "Helps to quickly identify root cases, whether they are software of hardware issues"
+        }
+      }
+    },
+    "chatify": {
+      "description": "A progressive web application where you can chat with anyone around the world in real-time.",
+      "stack": {
+        "react": "This webapp had to be built with a frontend framework and React is the one that I have more experience with.",
+        "socket_io": "For the real-time communication I chose socket.io, a powerfull and fast engine. It works on every platform, browser or device, so it is the best option out there.",
+        "node": "Its very easy to integrate socket.io with the Express framework so I chose NodeJs for the backend to handle sending and recieving messages."
+      },
+      "motivation": "I wanted to learn how websockets and PWA's worked and also I wanted to improve my expertise in React so I decided to build a real-time chat wich is an impressive but simple project.",
+      "solution": {
+        "text": "The final product is a progressive web application that uses a powerfull engine for real-time communication so you can send messages and everyone that uses the app will recieve it. It also provides the following features:",
+        "list": {
+          "1": "A central panel to see all messages sent in the history of the app",
+          "2": "A panel that displays all users that are currently on the chat room",
+          "3": "Provides an emoji parser, so if you send ':D' you will see 😀"
         }
       }
     }

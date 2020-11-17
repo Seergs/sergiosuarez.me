@@ -15,8 +15,8 @@ import {
 import styled, { css } from "styled-components/macro";
 import useTranslation from "../../hooks/useTranslation";
 import mixins from "../../theme/mixins";
-import FlaskIcon from "../../svg/flask.svg";
-import AzureIcon from "../../svg/azure.svg";
+import NodeIcon from "../../svg/node.svg";
+import SocketIcon from "../../svg/socketio.svg";
 import { graphql } from "gatsby";
 const { flexRow, justifyBetween } = mixins;
 
@@ -25,17 +25,17 @@ const StyledMIM = styled.div``;
 const Row = styled.div`
   ${flexRow};
   ${justifyBetween};
-  margin: 3rem 0;
+  margin: 4rem 0;
 `;
 
-export default function MIM({ data }) {
+export default function Chatify({ data }) {
   const { t } = useTranslation();
   const images = data.allImageSharp.edges.map((edge) => edge.node.fluid);
 
   function features() {
     const f = [];
-    for (let i = 0; i < 6; ++i) {
-      f.push(t(`project_page.mim.solution.list.${i + 1}`));
+    for (let i = 0; i < 3; ++i) {
+      f.push(t(`project_page.chatify.solution.list.${i + 1}`));
     }
 
     return f;
@@ -44,30 +44,41 @@ export default function MIM({ data }) {
   return (
     <Layout>
       <StyledMIM>
-        <Title>Master Incident Manager</Title>
+        <Title>Chatify</Title>
         <Row>
-          <Description projectName="mim">
-            <Links live="https://master-incident-management.netlify.app/" />
+          <Description projectName="chatify">
+            <Links
+              live="https://chatifywith.netlify.app/"
+              serverRepo="https://github.com/Seergs/chatify-server"
+              clientRepo="https://github.com/Seergs/chatify-client"
+            />
           </Description>
           <StackCollapsed
-            stack={["React", "Flask", "Azure", "MongoDB", "Netlify", "Heroku"]}
+            stack={[
+              "React",
+              "NodeJs",
+              "socket.io",
+              "TailwindCSS",
+              "MongoDB",
+              "Heroku",
+            ]}
           />
         </Row>
         <Row>
-          <Motivation text={t("project_page.mim.motivation")} />
+          <Motivation text={t("project_page.chatify.motivation")} />
         </Row>
         <StackExplanation stack={stack} />
-        <Solution project="mim" />
+        <Solution project="chatify" />
         <Features features={features()} />
-        <Images images={images} projectName="mim" />
+        <Images images={images} projectName="chatify" />
       </StyledMIM>
     </Layout>
   );
 }
 
 export const pageQuery = graphql`
-  query MIMPageQuery {
-    allImageSharp(filter: { fluid: { originalName: { regex: "/mim/" } } }) {
+  query ChatifyPageQuery {
+    allImageSharp(filter: { fluid: { originalName: { regex: "/chatify/" } } }) {
       edges {
         node {
           fluid(maxWidth: 1200, quality: 100) {
@@ -83,17 +94,17 @@ export const pageQuery = graphql`
 const stack = [
   {
     name: "React",
-    textId: "project_page.mim.stack.react",
+    textId: "project_page.chatify.stack.react",
     Icon: ReactIcon,
   },
   {
-    name: "Flask",
-    textId: "project_page.mim.stack.flask",
-    Icon: FlaskIcon,
+    name: "socket.io",
+    textId: "project_page.chatify.stack.socket_io",
+    Icon: SocketIcon,
   },
   {
-    name: "Azure",
-    textId: "project_page.mim.stack.azure",
-    Icon: AzureIcon,
+    name: "NodeJs",
+    textId: "project_page.chatify.stack.node",
+    Icon: NodeIcon,
   },
 ];

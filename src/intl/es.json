@@ -63,10 +63,10 @@
     "stack_title": "Tecnologías",
     "stack_explanation_title": "Explicación de las tecnologías elegidas",
     "motivation_title": "Motivación",
+    "website": "SITIO WEB",
     "solution_title": "Solución",
     "mim": {
       "description": "Este proyecto fue parte del Cisco Mexico University Challenge donde trabajé con un equipo para crear un administrador de incidentes para el área de Supply Chain. Este ayudaría a que los empleados pudieran llevar seguimiento de los errores y analizar las posibles soluciones para los nuevos incidentes en base al historial de estos.",
-      "website": "SITIO WEB",
       "stack": {
         "react": "El proyecto debía ser una plataforma interactiva así que se tuvo que elegir un framework para el frontend. Terminamos usando React porque varios de los miembros del equipo habían trabajado con el anteriormente. Además React nos ofrece mucha escalabilidad, la cual era un requerimiento para el proyecto.",
         "flask": "Para el backend escogimos Flask. Implementaríamos algoritmos de machine learning para proveer soluciones a los nuevos incidentes, por lo que la mejor opción era usar Python, sin embargo el equipo no tenía mucha experiencia con este, por lo que Flask era la mejor opción pues es fácil de usar y aprender.",
@@ -82,6 +82,23 @@
           "4": "La plataforma cuenta con acceso en base a roles",
           "5": "Considera seguridad de la información y protección de red",
           "6": "Ayuda a identificar rápidamente las causas raíz, ya sea de hardware o software"
+        }
+      }
+    },
+    "chatify": {
+      "description": "Una progressive web application (PWA) en la que puedes chatear con cualquier persona del mundo en tiempo real.",
+      "stack": {
+        "react": "Esta aplicación tenía que ser creada con un framework para el frontend y React era con el que tenía más experiencia.",
+        "socket_io": "Para la comunicación en tiempo real elegí socket.io, un motor rápido y poderoso. Funciona en cualquier plataforma, navegador o dispositivo, así que es la mejor opción.",
+        "node": "La integración de socket.io con Express es muy fácil así que decidí usar NodeJs para el backend, para manejar el envío y recepción de mensajes."
+      },
+      "motivation": "Quería aprender cómo funcionaban los websockets y las PWA's. Además quería mejorar mis habilidades en React así que decidí crear un chat en tiempo real, el cual es un project simple pero impresionante.",
+      "solution": {
+        "text": "El producto final es una progressive web application que usa un poderoso motor para comunicación en tiempo real en el que puedes enviar mensajes y cualquier persona que esté en la aplicación lo va a recivir. También provee las siguientes características:",
+        "list": {
+          "1": "Un panel central para ver todos los mensajes que se han enviado a lo largo de la historia del chat",
+          "2": "Un panel que muestra todos los usuarios que están actualmente en la sala del chat",
+          "3": "Un emoji parser, así que si envías ':D' lo que verás será 😀"
         }
       }
     }

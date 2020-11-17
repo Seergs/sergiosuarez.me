@@ -8,6 +8,12 @@ const ImagesContainer = styled.section`
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 2fr 1fr 2fr;
   margin: 4rem 0;
+
+  ${(props) =>
+    props.isTwoRows &&
+    css`
+      grid-template-rows: 3fr 1fr;
+    `}
 `;
 
 const ImageWrapper = styled.div`
@@ -25,7 +31,7 @@ const ImageWrapper = styled.div`
 export default function Images({ images, projectName }) {
   const altTexts = generateAltTexts(images);
   return (
-    <ImagesContainer>
+    <ImagesContainer isTwoRows={projectName === "chatify"}>
       {images.map((image) => {
         return (
           <ImageWrapper>
