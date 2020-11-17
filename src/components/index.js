@@ -15,3 +15,5 @@ export { default as StackCollapsed } from "./project/stack";
 export { default as Motivation } from "./project/motivation";
 export { default as StackExplanation } from "./project/stack-explanation";
 export { default as ReactIcon } from "./react-icon";
+export { default as Solution } from "./project/solution";
+export { default as Features } from "./project/features";
