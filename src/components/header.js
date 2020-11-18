@@ -27,7 +27,6 @@ const Container = styled.div`
 
 export default function Header() {
   const { pathname } = useLocation();
-  const [isDarkTheme, setIsDarkTheme] = useState(false);
   return (
     <Wrapper>
       <Link to={pathname.includes("en") ? "/en" : "/es"}>
@@ -35,10 +34,7 @@ export default function Header() {
       </Link>
       <Container>
         <LanguageSwitcher />
-        <ThemeSwitch
-          isEnabled={isDarkTheme}
-          onToggle={(e) => setIsDarkTheme(!isDarkTheme)}
-        />
+        <ThemeSwitch />
       </Container>
     </Wrapper>
   );

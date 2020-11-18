@@ -1,5 +1,6 @@
 {
-  "dark_mode": "Enable dark mode",
+  "dark_mode": "Toggle to dark mode",
+  "light_mode": "Toggle to light mode",
   "home": {
     "welcome": {
       "title": "Hi there!",

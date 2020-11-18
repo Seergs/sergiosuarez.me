@@ -26,7 +26,7 @@ const LinkItem = styled.li``;
 const Link = styled.a`
   ${(props) => css`
     text-decoration: none;
-    color: ${props.theme.headings};
+    color: var(--color-headings);
     position: relative;
     &::after {
       position: absolute;
@@ -35,7 +35,7 @@ const Link = styled.a`
       left: 0;
       width: 0;
       height: 3px;
-      background-color: ${props.theme.headings};
+      background-color: var(--color-headings);
       transition: all 0.2s ease-in-out;
     }
 

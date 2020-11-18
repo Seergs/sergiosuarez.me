@@ -25,6 +25,10 @@ const StyledLanguageSwitcher = styled.button`
     ${alignCenter};
     cursor: pointer;
 
+    svg:last-child {
+      fill: var(--color-text);
+    }
+
     svg:first-child {
       width: 20px;
       margin-right: 8px;
@@ -47,7 +51,7 @@ const Link = styled(GatsbyLink)`
     text-decoration: none;
     position: relative;
     display: inline-block;
-    color: ${props.theme.headings};
+    color: var(--color-headings);
     font-size: 0.9rem;
     &::after {
       position: absolute;
@@ -56,7 +60,7 @@ const Link = styled(GatsbyLink)`
       left: 0;
       width: 0;
       height: 3px;
-      background-color: ${props.theme.headings};
+      background-color: var(--color-headings);
       transition: all 0.2s ease-in-out;
     }
 

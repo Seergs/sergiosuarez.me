@@ -1,7 +1,10 @@
 import React from "react";
-import { ThemeProvider } from "styled-components";
+import { ThemeProvider as StyledProvider } from "styled-components";
+import { ThemeProvider } from "./src/context/theme-context";
 import theme from "./src/theme/theme";
 
 export const wrapRootElement = ({ element }) => (
-  <ThemeProvider theme={theme.light}>{element}</ThemeProvider>
+  <ThemeProvider>
+    <StyledProvider theme={theme.light}>{element}</StyledProvider>
+  </ThemeProvider>
 );

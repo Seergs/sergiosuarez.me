@@ -69,7 +69,7 @@ const ProjectName = styled(Link)`
   font-size: 1.5rem;
   margin-top: 2.5rem;
   margin-bottom: 2rem;
-  color: ${({ theme }) => theme.headings};
+  color: var(--color-headings);
 `;
 
 export default function ProjectCard({ name, image }) {

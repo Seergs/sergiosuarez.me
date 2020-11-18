@@ -57,7 +57,7 @@ const Label = styled.label`
   ${(props) => css`
     font-size: 0.9rem;
     font-weight: 700;
-    color: ${props.theme.headings};
+    color: var(--color-headings);
     margin-bottom: 0.5rem;
 
     ${props.htmlFor === "message" &&

@@ -5,7 +5,7 @@ const Wrapper = styled.div``;
 
 const Title = styled.h3`
   ${(props) => css`
-    color: ${props.theme.headings};
+    color: var(--color-headings);
     font-size: 0.9rem;
     margin-bottom: 1.5rem;
   `}
@@ -17,7 +17,7 @@ const UList = styled.ul`
 
 const ListItem = styled.li`
   ${(props) => css`
-    color: ${props.theme.text};
+    color: var(--color-text);
     margin: 1.5rem 0;
     position: relative;
     &:before {
@@ -27,7 +27,7 @@ const ListItem = styled.li`
       height: 10px;
       top: 5px;
       left: -1.5rem;
-      border: 1px solid ${props.theme.headings};
+      border: 1px solid var(--color-headings);
       border-radius: 50%;
     }
   `}

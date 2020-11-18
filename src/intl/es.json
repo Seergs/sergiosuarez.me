@@ -1,5 +1,6 @@
 {
-  "dark_mode": "Activar modo oscuro",
+  "dark_mode": "Cambiar a modo oscuro",
+  "light_mode": "Cambiar a modo claro",
   "home": {
     "welcome": {
       "title": "Hola!",

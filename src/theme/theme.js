@@ -1,5 +1,6 @@
 const theme = {
   light: {
+    bg: "#ffffff",
     teal: "#16C0B6",
     headings: "#1A202C",
     text: "#4A5568",
@@ -8,9 +9,10 @@ const theme = {
     focusOutline: "#90CDF4",
   },
   dark: {
-    headings: "#1A202C",
+    bg: "#1A202C",
+    headings: "#f7fafc",
     teal: "#16C0B6",
-    text: "#4A5568",
+    text: "#f7fafc",
     inputOutline: "#CCCDD4",
     contactButtonText: "#f7fafc",
     focusOutline: "#90CDF4",

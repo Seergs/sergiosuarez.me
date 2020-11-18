@@ -4,7 +4,7 @@ import useTranslation from "../hooks/useTranslation";
 
 const Intro = styled.section`
   ${(props) => css`
-    color: ${props.theme.headings};
+    color: var(--color-headings);
     font-size: 3rem;
     font-weight: 700;
     letter-spacing: 1px;
