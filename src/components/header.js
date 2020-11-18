@@ -1,11 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import LogoSvg from "../svg/logo.svg";
 import styled from "styled-components/macro";
 import { Link } from "gatsby";
 import LanguageSwitcher from "./lang-switcher";
 import mixins from "../theme/mixins";
 import { useLocation } from "@reach/router";
-const { justifyBetween, flexRow } = mixins;
+import ThemeSwitch from "./theme-switch";
+const { justifyBetween, flexRow, alignCenter } = mixins;
 
 const Wrapper = styled.header`
   margin-bottom: 4rem;
@@ -18,14 +19,27 @@ const Logo = styled(LogoSvg)`
   height: auto;
 `;
 
+const Container = styled.div`
+  ${flexRow};
+  ${alignCenter};
+  gap: 2rem;
+`;
+
 export default function Header() {
   const { pathname } = useLocation();
+  const [isDarkTheme, setIsDarkTheme] = useState(false);
   return (
     <Wrapper>
       <Link to={pathname.includes("en") ? "/en" : "/es"}>
         <Logo />
       </Link>
-      <LanguageSwitcher />
+      <Container>
+        <LanguageSwitcher />
+        <ThemeSwitch
+          isEnabled={isDarkTheme}
+          onToggle={(e) => setIsDarkTheme(!isDarkTheme)}
+        />
+      </Container>
     </Wrapper>
   );
 }

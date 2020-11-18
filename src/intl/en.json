@@ -1,4 +1,5 @@
 {
+  "dark_mode": "Enable dark mode",
   "home": {
     "welcome": {
       "title": "Hi there!",
@@ -12,7 +13,7 @@
       "subtitle": "About me",
       "text": {
         "1": "I'm a 20 year old computer engineer student at UDG.",
-        "2": "In my journey as a developer I've worked with talented people because I enjoy learning and collaborating to create beautiful and innovating products"
+        "2": "In my journey as a developer I've worked with talented people because I enjoy learning and collaborating to create beautiful and innovating products."
       },
       "resume": "Download my resume"
     },

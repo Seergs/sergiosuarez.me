@@ -15,8 +15,6 @@ import {
 import styled from "styled-components/macro";
 import useTranslation from "../../hooks/useTranslation";
 import mixins from "../../theme/mixins";
-import NodeIcon from "../../svg/node.svg";
-import SocketIcon from "../../svg/socketio.svg";
 import { graphql } from "gatsby";
 const { flexRow, justifyBetween } = mixins;
 
