@@ -7,7 +7,9 @@ const { justifyCenter, alignCenter } = mixins;
 export const StyledLink = styled.span`
   ${(props) => css`
     position: relative;
-    color: ${props.isPrimaryColor ? props.theme.teal : "var(--color-headings)"};
+    color: ${props.isPrimaryColor
+      ? "var(--color-primary)"
+      : "var(--color-headings)"};
     font-weight: 600;
     ${justifyCenter};
     ${alignCenter};
@@ -28,7 +30,7 @@ export const StyledLink = styled.span`
       width: 0;
       height: 3px;
       background-color: ${props.isPrimaryColor
-        ? props.theme.teal
+        ? "var(--color-primary)"
         : "var(--color-headings)"};
       transition: all 0.2s ease-in-out;
     }
@@ -41,7 +43,7 @@ export const StyledLink = styled.span`
 
     svg > path {
       fill: ${props.isPrimaryColor
-        ? props.theme.teal
+        ? "var(--color-primary)"
         : "var(--color-headings)"};
     }
   `}

@@ -20,7 +20,7 @@ const ListItem = styled.li`
       height: 10px;
       top: 10px;
       left: -1.5rem;
-      border: 1px solid ${props.theme.text};
+      border: 1px solid var(--color-text);
       border-radius: 50%;
     }
   `}

@@ -20,6 +20,7 @@ const ListItem = styled.li`
 const TechName = styled.h3`
   font-size: 0.9rem;
   margin-bottom: 1rem;
+  color: var(--color-headings);
 `;
 
 const Row = styled.div`

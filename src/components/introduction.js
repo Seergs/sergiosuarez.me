@@ -16,7 +16,7 @@ const Greeting = styled.div``;
 
 const Name = styled.span`
   font-size: 3.5rem;
-  color: ${({ theme }) => theme.teal};
+  color: var(--color-primary);
 `;
 
 const Description = styled.div``;

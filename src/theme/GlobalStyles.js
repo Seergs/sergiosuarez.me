@@ -11,13 +11,13 @@ ${(props) => css`
   *,
   *::after,
   *::before {
-    font-family: "Montserrat";
+    font-family: "Poppins", sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
   }
   *:focus {
-    outline: 2px solid ${props.theme.focusOutline};
+    outline: 2px solid var(--color-focusOutline);
   }
 `}
 `;

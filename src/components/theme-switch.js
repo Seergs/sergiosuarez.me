@@ -1,17 +1,20 @@
 import React, { useContext } from "react";
-import styled, { css } from "styled-components/macro";
+import styled from "styled-components/macro";
 import useTranslation from "../hooks/useTranslation";
-import mixins from "../theme/mixins";
 import LightIcon from "../svg/light.svg";
 import DarkIcon from "../svg/dark.svg";
 import { motion, AnimatePresence } from "framer-motion";
 import VisuallyHidden from "./visually-hidden";
 import { ThemeContext } from "../context/theme-context";
+import mixins from "../theme/mixins";
+const { flexRow, alignCenter } = mixins;
 
 const StyledSwitch = styled.button`
   background-color: transparent;
   border: 0;
   cursor: pointer;
+  ${flexRow};
+  ${alignCenter};
 
   svg {
     fill: var(--color-text);

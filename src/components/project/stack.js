@@ -14,7 +14,7 @@ const List = styled.ul`
 const ListItem = styled.li`
   ${(props) => css`
     position: relative;
-    color: ${props.theme.headings};
+    color: var(--color-headings);
     &:not(:first-child) {
       margin: 0.5rem 0;
     }
@@ -25,7 +25,7 @@ const ListItem = styled.li`
       top: 6px;
       width: 8px;
       height: 8px;
-      background-color: ${props.theme.headings};
+      background-color: var(--color-headings);
       border-radius: 50%;
     }
   `}

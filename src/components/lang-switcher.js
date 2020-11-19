@@ -16,7 +16,7 @@ const Wrapper = styled.div``;
 
 const StyledLanguageSwitcher = styled.button`
   ${(props) => css`
-    color: ${props.theme.headings};
+    color: var(--color-headings);
     position: relative;
     font-weight: 600;
     background: transparent;
@@ -25,7 +25,7 @@ const StyledLanguageSwitcher = styled.button`
     ${alignCenter};
     cursor: pointer;
 
-    svg:last-child {
+    svg:nth-child(2) {
       fill: var(--color-text);
     }
 
@@ -72,6 +72,11 @@ const Link = styled(GatsbyLink)`
   `}
 `;
 
+const SvgWrapper = styled(motion.div)`
+  ${flexRow};
+  ${alignCenter};
+`;
+
 export default function LangSwitcher() {
   const [isDropdownOpen, setIsDropdowOpen] = useState(false);
   const language = useLanguage();
@@ -90,7 +95,17 @@ export default function LangSwitcher() {
       <StyledLanguageSwitcher onClick={onClick}>
         {language === "EN" ? <USFlag /> : <SpainFlag />}
         {language}
-        <ChevronDown />
+        <SvgWrapper
+          animate={
+            isDropdownOpen
+              ? {
+                  rotateX: 180,
+                }
+              : { rotateX: 0 }
+          }
+        >
+          <ChevronDown />
+        </SvgWrapper>
         <AnimatePresence>
           {isDropdownOpen && (
             <LanguagesList

@@ -1,5 +1,5 @@
 import React, { useRef, useState } from "react";
-import styled, { css, useTheme } from "styled-components";
+import styled, { css } from "styled-components";
 import useTranslation from "../hooks/useTranslation";
 import mixins from "../theme/mixins";
 import { motion } from "framer-motion";
@@ -30,7 +30,9 @@ const Col = styled.div`
 const Input = styled.input`
   ${(props) => css`
     height: 45px;
-    border: 1px solid ${props.theme.inputOutline};
+    border: 1px solid var(--color-inputOutline);
+    background-color: var(--color-inputBackground);
+    color: var(--color-headings);
     border-radius: 3px;
     padding: 0 10px;
     ${props.type === "text"
@@ -46,7 +48,9 @@ const Input = styled.input`
 const Message = styled.textarea`
   ${(props) => css`
     width: 700px;
-    border: 1px solid ${props.theme.inputOutline};
+    border: 1px solid var(--color-inputOutline);
+    background-color: var(--color-inputBackground);
+    color: var(--color-headings);
     resize: none;
     border-radius: 3px;
     padding: 10px;
@@ -73,8 +77,9 @@ const Button = styled(motion.button)`
   ${(props) => css`
     width: 250px;
     height: 45px;
-    font-weight: 500;
-    color: ${props.theme.contactButtonText};
+    font-weight: 600;
+    color: var(--color-contactButtonText);
+    background-color: var(--color-contactButtonBackground);
     font-size: 0.9rem;
     border-radius: 3px;
     border: 0;
@@ -87,14 +92,16 @@ const Button = styled(motion.button)`
     &:disabled {
       cursor: not-allowed;
     }
+
+    &:hover {
+      filter: brightness(1.1);
+    }
   `}
 `;
 
 export default function ContactForm() {
   const { t } = useTranslation();
   const [error, setError] = useState(false);
-
-  const theme = useTheme();
 
   const {
     values,
@@ -181,12 +188,14 @@ export default function ContactForm() {
       ) : (
         <Row style={{ marginTop: "1.5rem" }}>
           <Button
-            whileHover={isSubmitted ? undefined : animations.button.hover}
             disabled={isSubmitted}
             animate={
               isSubmitted
-                ? { ...animations.button.animate, backgroundColor: theme.teal }
-                : { backgroundColor: theme.headings }
+                ? {
+                    ...animations.button.animate,
+                    backgroundColor: "var(--color-primary)",
+                  }
+                : undefined
             }
           >
             {isSubmitted ? <Checkmark /> : t("home.contact.button_text")}

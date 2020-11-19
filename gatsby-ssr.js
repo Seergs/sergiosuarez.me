@@ -1,48 +1,41 @@
 import theme from "./src/theme/theme";
+import React from "react";
+
+function setColorsByTheme() {
+  const colors = "🎨";
+  const colorModeKey = "🔑";
+  const colorModeCssProp = "🎇";
+
+  let colorMode = "light";
+  const persistedColorPreference = window.localStorage.getItem(colorModeKey);
+  const hastPersistedPreference = typeof persistedColorPreference === "string";
+  const mql = window.matchMedia("(prefers-color-scheme: dark)");
+
+  if (hastPersistedPreference) colorMode = persistedColorPreference;
+  else colorMode = mql.matches ? "dark" : "light";
+
+  let root = document.documentElement;
+
+  root.style.setProperty(colorModeCssProp, colorMode);
+
+  for (const [colorName, colorValue] of Object.entries(colors[colorMode])) {
+    const cssVarName = `--color-${colorName}`;
+
+    root.style.setProperty(cssVarName, colorValue);
+  }
+}
+
 const MagicScriptTag = () => {
-  let codeToRunOnClient = `
-        (function(){
-            function getInitialColorMode() {
-                const persistedColorPreference = window.localStorage.getItem("color-mode");
-                const hastPersistedPreference = typeof persistedColorPreference === "string";
+  const boundFn = String(setColorsByTheme)
+    .replace(`"🎨"`, JSON.stringify(theme))
+    .replace("🔑", "color-mode")
+    .replace("🎇", "--initial-color-mode");
 
-                if (hastPersistedPreference) return persistedColorPreference;
+  let calledFunction = `(${boundFn})()`;
 
-                const mql = window.matchMedia("(prefers-color-scheme: dark)");
-                const hastMediaQueryPreference = typeof mql.matches === "boolean";
+  return <script dangerouslySetInnerHTML={{ __html: calledFunction }} />;
+};
 
-                if (hastMediaQueryPreference) return mql.matches ? "dark" : "light";
-
-                return "light";
-            }
-
-            const colorMode = getInitialColorMode();
-
-            const root = document.documentElement;
-
-    
-            root.style.setProperty(
-                '--color-background',
-                colorMode === 'light
-                ? '${theme.light.bg}'
-                : '${theme.dark.bg}'
-            );
-            root.style.setProperty(
-                '--color-text',
-                colorMode === 'light
-                    ? '${theme.light.text}'
-                    : '${theme.dark.text}'
-            );
-            root.style.setProperty(
-                '--color-headings',
-                colorMode === 'light
-                    ? '${theme.light.headings}'
-                    : '${theme.dark.headings}'
-            );
-
-            root.style.setProperty('--initial-color-mode', colorMode);
-        })()
-    `;
-
-  return <script dangerouslySetInnerHTML={{ __html: codeToRunOnClient }} />;
+export const onRenderBody = ({ setPreBodyComponents }) => {
+  setPreBodyComponents(<MagicScriptTag />);
 };
