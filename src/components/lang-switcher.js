@@ -10,6 +10,7 @@ import SpainFlag from "../svg/es.svg";
 import { motion, AnimatePresence } from "framer-motion";
 import { useLocation } from "@reach/router";
 import { createChangeLangLink } from "../utils/create-link";
+import useTranslation from "../hooks/useTranslation";
 const { flexRow, alignCenter } = mixins;
 
 const Wrapper = styled.div``;
@@ -24,10 +25,6 @@ const StyledLanguageSwitcher = styled.button`
     ${flexRow};
     ${alignCenter};
     cursor: pointer;
-
-    svg:nth-child(2) {
-      fill: var(--color-text);
-    }
 
     svg:first-child {
       width: 20px;
@@ -75,12 +72,17 @@ const Link = styled(GatsbyLink)`
 const SvgWrapper = styled(motion.div)`
   ${flexRow};
   ${alignCenter};
+
+  svg {
+    fill: var(--color-text);
+  }
 `;
 
 export default function LangSwitcher() {
   const [isDropdownOpen, setIsDropdowOpen] = useState(false);
   const language = useLanguage();
   const { pathname } = useLocation();
+  const { t } = useTranslation();
 
   const ref = useRef();
 
@@ -118,12 +120,18 @@ export default function LangSwitcher() {
               exit={{ opacity: 0 }}
             >
               <LanguageListItem>
-                <Link to={createChangeLangLink({ pathname, newPath: "en" })}>
+                <Link
+                  title={t("english")}
+                  to={createChangeLangLink({ pathname, newPath: "en" })}
+                >
                   EN
                 </Link>
               </LanguageListItem>
               <LanguageListItem>
-                <Link to={createChangeLangLink({ pathname, newPath: "es" })}>
+                <Link
+                  title={t("spanish")}
+                  to={createChangeLangLink({ pathname, newPath: "es" })}
+                >
                   ES
                 </Link>
               </LanguageListItem>

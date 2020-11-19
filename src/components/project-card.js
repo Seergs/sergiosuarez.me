@@ -14,7 +14,7 @@ const Card = styled.li`
       grid-column: 1 / 5;
       text-align: center;
       ${ImageContainer} {
-        background-color: #f9fbfb;
+        background-color: var(--color-projectCard1);
       }
 
       ${Text} {
@@ -25,20 +25,20 @@ const Card = styled.li`
       grid-column: 1 / 3;
       ${ImageContainer} {
         height: 350px;
-        background-color: #fdfff4;
+        background-color: var(--color-projectCard2);
       }
     }
     &:nth-child(3) {
       grid-column: 3 / 5;
       ${ImageContainer} {
         height: 350px;
-        background-color: #f1f2fa;
+        background-color: var(--color-projectCard3);
       }
     }
     &:nth-child(4) {
       grid-column: 2 / 4;
       ${ImageContainer} {
-        background-color: #f9fbfb;
+        background-color: var(--color-projectCard4);
       }
     }
     ${Text} {

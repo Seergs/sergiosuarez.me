@@ -89,12 +89,12 @@ const Button = styled(motion.button)`
     ${alignCenter};
     ${justifyCenter};
 
-    &:disabled {
-      cursor: not-allowed;
+    &:not(:disabled):hover {
+      filter: brightness(1.1);
     }
 
-    &:hover {
-      filter: brightness(1.1);
+    &:disabled {
+      cursor: not-allowed;
     }
   `}
 `;

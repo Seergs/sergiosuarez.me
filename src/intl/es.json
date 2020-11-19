@@ -1,6 +1,8 @@
 {
   "dark_mode": "Cambiar a modo oscuro",
   "light_mode": "Cambiar a modo claro",
+  "spanish": "Cambiar a español",
+  "english": "Cambiar a inglés",
   "home": {
     "welcome": {
       "title": "Hola!",
@@ -68,7 +70,7 @@
     "website": "SITIO WEB",
     "solution_title": "Solución",
     "mim": {
-      "description": "Este proyecto fue parte del Cisco Mexico University Challenge donde trabajé con un equipo para crear un administrador de incidentes para el área de Supply Chain. Este ayudaría a que los empleados pudieran llevar seguimiento de los errores y analizar las posibles soluciones para los nuevos incidentes en base al historial de estos.",
+      "description": "Este proyecto fue parte del Cisco Mexico University Challenge donde trabajé con un equipo para crear un administrador de incidentes para el área de Supply Chain de Cisco. Este ayudaría a que los empleados pudieran llevar seguimiento de los errores y analizar las posibles soluciones para los nuevos incidentes en base al historial de estos.",
       "stack": {
         "react": "El proyecto debía ser una plataforma interactiva así que se tuvo que elegir un framework para el frontend. Terminamos usando React porque varios de los miembros del equipo habían trabajado con el anteriormente. Además React nos ofrece mucha escalabilidad, la cual era un requerimiento para el proyecto.",
         "flask": "Para el backend escogimos Flask. Implementaríamos algoritmos de machine learning para proveer soluciones a los nuevos incidentes, por lo que la mejor opción era usar Python, sin embargo el equipo no tenía mucha experiencia con este, por lo que Flask era la mejor opción pues es fácil de usar y aprender.",
