@@ -6,6 +6,7 @@ import { useLocation } from "@reach/router";
 import { ThemeContext } from "../context/theme-context";
 import LogoLight from "../svg/logo-light.svg";
 import LogoDark from "../svg/logo-dark.svg";
+import { mediaQueries } from "../theme/breakpoints";
 const { flexRow, justifyBetween } = mixins;
 
 const Wrapper = styled.footer`
@@ -28,8 +29,17 @@ const LinkList = styled.ul`
   list-style-type: none;
   ${flexRow};
   gap: 4rem;
+
+  ${mediaQueries("md")`
+    gap: 1rem;
+  `}
 `;
-const LinkItem = styled.li``;
+const LinkItem = styled.li`
+  ${mediaQueries("md")`
+    font-size: .9rem;
+  `}
+`;
+
 const Link = styled.a`
   ${(props) => css`
     text-decoration: none;

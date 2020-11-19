@@ -17,6 +17,9 @@ const mixins = {
   alignCenter: css`
     align-items: center;
   `,
+  alignStart: css`
+    align-items: flex-start;
+  `,
 };
 
 export default mixins;

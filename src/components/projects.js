@@ -4,6 +4,7 @@ import styled from "styled-components/macro";
 import useTranslation from "../hooks/useTranslation";
 import ProjectCard from "./project-card";
 import generateAltTexts from "../utils/generateAltTexts";
+import { mediaQueries } from "../theme/breakpoints";
 
 const Wrapper = styled.div``;
 
@@ -13,6 +14,10 @@ const Container = styled.ul`
   column-gap: 1rem;
   row-gap: 6rem;
   list-style-type: none;
+
+  ${mediaQueries("xl")`
+    grid-template-columns: 1fr;
+  `}
 `;
 
 export default function Projects({ images }) {

@@ -5,6 +5,7 @@ import Text from "./text";
 import List from "./list";
 import useTranslation from "../hooks/useTranslation";
 import mixins from "../theme/mixins";
+import { mediaQueries } from "../theme/breakpoints";
 const { flexRow, justifyBetween } = mixins;
 
 const Wrapper = styled.section`
@@ -17,6 +18,11 @@ const Wrapper = styled.section`
 const Lists = styled.ul`
   ${flexRow};
   ${justifyBetween};
+
+  ${mediaQueries("lg")`
+    gap: 4rem;
+    flex-wrap: wrap;
+  `}
 `;
 
 const skills = {

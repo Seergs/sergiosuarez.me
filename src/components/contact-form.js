@@ -6,7 +6,8 @@ import { motion } from "framer-motion";
 import useForm from "../hooks/useForm";
 import Checkmark from "../svg/checkmark.svg";
 import Text from "./text";
-const { flexRow, alignCenter, justifyCenter, flexColumn } = mixins;
+import { mediaQueries } from "../theme/breakpoints";
+const { flexRow, alignCenter, justifyCenter, flexColumn, alignStart } = mixins;
 
 const Form = styled.form`
   margin-top: 4rem;
@@ -21,10 +22,16 @@ const Row = styled.div`
   ${flexRow};
   ${alignCenter};
   gap: 1.5rem;
+
+  ${mediaQueries("xl")`
+    flex-direction:column;
+    align-items:flex-start;
+  `}
 `;
 
 const Col = styled.div`
   ${flexColumn}
+  width: 100%;
 `;
 
 const Input = styled.input`
@@ -43,6 +50,10 @@ const Input = styled.input`
           width: 500px;
         `}
   `}
+
+  ${mediaQueries("lg")`
+    width: 100%;
+  `}
 `;
 
 const Message = styled.textarea`
@@ -54,6 +65,10 @@ const Message = styled.textarea`
     resize: none;
     border-radius: 3px;
     padding: 10px;
+
+    ${mediaQueries("lg")`
+      width: 100%;
+     `}
   `}
 `;
 
@@ -76,7 +91,7 @@ const Error = styled.span``;
 const Button = styled(motion.button)`
   ${(props) => css`
     width: 250px;
-    height: 45px;
+    height: 48px;
     font-weight: 600;
     color: var(--color-contactButtonText);
     background-color: var(--color-contactButtonBackground);
@@ -96,6 +111,32 @@ const Button = styled(motion.button)`
     &:disabled {
       cursor: not-allowed;
     }
+
+    ${mediaQueries("md")`
+      width: 100%;
+      margin: 0 auto;
+    `}
+  `}
+`;
+
+const SuccessMessage = styled.div`
+  ${flexRow};
+  ${alignCenter};
+
+  ${Text} {
+    margin-left: 2rem;
+
+    ${mediaQueries("md")`
+    
+      margin-left:0;
+      margin-top: 1rem;      
+      width: 100%;
+      text-align:center;
+    `}
+  }
+
+  ${mediaQueries("md")`
+    flex-direction: column;
   `}
 `;
 
@@ -186,7 +227,7 @@ export default function ContactForm() {
       {error ? (
         <Error>{t("home.contact.error")}</Error>
       ) : (
-        <Row style={{ marginTop: "1.5rem" }}>
+        <SuccessMessage style={{ marginTop: "1.5rem" }}>
           <Button
             disabled={isSubmitted}
             animate={
@@ -201,7 +242,7 @@ export default function ContactForm() {
             {isSubmitted ? <Checkmark /> : t("home.contact.button_text")}
           </Button>
           {isSubmitted && <Text>{t("home.contact.submitted_text")}</Text>}
-        </Row>
+        </SuccessMessage>
       )}
     </Form>
   );
@@ -213,7 +254,7 @@ const animations = {
       backgroundColor: "#000000",
     },
     animate: {
-      width: "45px",
+      width: "48px",
       borderRadius: "50%",
     },
   },

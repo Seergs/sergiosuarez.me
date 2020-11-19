@@ -1,5 +1,6 @@
 import React from "react";
 import styled, { css } from "styled-components/macro";
+import { mediaQueries } from "../theme/breakpoints";
 
 const Wrapper = styled.div``;
 
@@ -25,11 +26,15 @@ const ListItem = styled.li`
       content: "";
       width: 10px;
       height: 10px;
-      top: 5px;
+      top: 7px;
       left: -1.5rem;
       border: 1px solid var(--color-headings);
       border-radius: 50%;
     }
+
+    ${mediaQueries("lg")`
+      margin: .8rem 0;
+    `}
   `}
 `;
 
