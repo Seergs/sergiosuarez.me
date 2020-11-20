@@ -7,7 +7,7 @@ import useForm from "../hooks/useForm";
 import Checkmark from "../svg/checkmark.svg";
 import Text from "./text";
 import { mediaQueries } from "../theme/breakpoints";
-const { flexRow, alignCenter, justifyCenter, flexColumn, alignStart } = mixins;
+const { flexRow, alignCenter, justifyCenter, flexColumn } = mixins;
 
 const Form = styled.form`
   margin-top: 4rem;
