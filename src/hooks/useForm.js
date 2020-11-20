@@ -1,7 +1,6 @@
 import { useState } from "react";
-function useForm({ initialValues = {}, onSubmit }) {
+function useForm({ initialValues = {} }) {
   const [values, setValues] = useState(initialValues);
-  const [isSubmitted, setIsSubmitted] = useState(false);
 
   function handleChange(e) {
     const { target } = e;
@@ -10,18 +9,10 @@ function useForm({ initialValues = {}, onSubmit }) {
     setValues({ ...values, [name]: value });
   }
 
-  function handleSubmit(e) {
-    if (e) e.preventDefault();
-
-    onSubmit();
-  }
-
   return {
     values,
-    isSubmitted,
-    setIsSubmitted,
+
     handleChange,
-    handleSubmit,
   };
 }
 

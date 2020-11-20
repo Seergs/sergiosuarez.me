@@ -1,10 +1,9 @@
-import React, { useRef, useState } from "react";
+import React from "react";
 import styled, { css } from "styled-components";
 import useTranslation from "../hooks/useTranslation";
 import mixins from "../theme/mixins";
 import { motion } from "framer-motion";
 import useForm from "../hooks/useForm";
-import Checkmark from "../svg/checkmark.svg";
 import Text from "./text";
 import { mediaQueries } from "../theme/breakpoints";
 const { flexRow, alignCenter, justifyCenter, flexColumn } = mixins;
@@ -86,12 +85,6 @@ const Label = styled.label`
   `}
 `;
 
-const Error = styled.span`
-  margin: 1rem 0;
-  color: #991b1b;
-  font-weight: 700;
-`;
-
 const Button = styled(motion.button)`
   ${(props) => css`
     width: 250px;
@@ -103,69 +96,37 @@ const Button = styled(motion.button)`
     border-radius: 3px;
     border: 0;
     cursor: pointer;
+    margin-top: 2rem;
 
     ${flexRow};
     ${alignCenter};
     ${justifyCenter};
 
-    &:not(:disabled):hover {
+    &:hover {
       filter: brightness(1.1);
     }
 
-    &:disabled {
-      cursor: not-allowed;
-    }
-
     ${mediaQueries("md")`
       width: 100%;
-      margin: 0 auto;
+      margin-left: auto;
+      margin-right: auto;
     `}
-  `}
-`;
-
-const SuccessMessage = styled.div`
-  ${flexRow};
-  ${alignCenter};
-
-  ${Text} {
-    margin-left: 2rem;
-
-    ${mediaQueries("md")`
-    
-      margin-left:0;
-      margin-top: 1rem;      
-      width: 100%;
-      text-align:center;
-    `}
-  }
-
-  ${mediaQueries("md")`
-    flex-direction: column;
   `}
 `;
 
 export default function ContactForm() {
   const { t } = useTranslation();
-  const [error, setError] = useState(false);
 
-  const {
-    values,
-    isSubmitted,
-    setIsSubmitted,
-    handleChange,
-    handleSubmit,
-  } = useForm({
+  const { values, handleChange } = useForm({
     initialValues: {
       name: "",
       email: "",
       message: "",
     },
-    onSubmit,
   });
 
   return (
     <Form
-      ref={contactForm}
       name="contact-form"
       method="post"
       data-netlify="true"
@@ -202,39 +163,7 @@ export default function ContactForm() {
         value={values.message}
         onChange={handleChange}
       />
-      {error ? (
-        <Error>{t("home.contact.error")}</Error>
-      ) : (
-        <SuccessMessage style={{ marginTop: "1.5rem" }}>
-          <Button
-            type="submit"
-            disabled={isSubmitted}
-            animate={
-              isSubmitted
-                ? {
-                    ...animations.button.animate,
-                    backgroundColor: "var(--color-primary)",
-                  }
-                : undefined
-            }
-          >
-            {isSubmitted ? <Checkmark /> : t("home.contact.button_text")}
-          </Button>
-          {isSubmitted && <Text>{t("home.contact.submitted_text")}</Text>}
-        </SuccessMessage>
-      )}
+      <Button type="submit">{t("home.contact.button_text")}</Button>
     </Form>
   );
 }
-
-const animations = {
-  button: {
-    hover: {
-      backgroundColor: "#000000",
-    },
-    animate: {
-      width: "48px",
-      borderRadius: "50%",
-    },
-  },
-};
