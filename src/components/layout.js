@@ -2,15 +2,17 @@ import React from "react";
 import GlobalStyles from "../theme/GlobalStyles";
 import Footer from "./footer";
 import Header from "./header";
+import SEO from "./seo";
 
-const Layout = ({ children }) => {
+const Layout = ({ children, pageTitle }) => {
   return (
-    <div>
+    <>
+      <SEO title={pageTitle} />
       <GlobalStyles />
       <Header />
       {children}
       <Footer />
-    </div>
+    </>
   );
 };
 

@@ -40,7 +40,7 @@ export default function Chatify({ data }) {
   }
 
   return (
-    <Layout>
+    <Layout pageTitle="HP Wiki • Sergio">
       <StyledMIM>
         <Title>Harry Potter wiki</Title>
         <Row>

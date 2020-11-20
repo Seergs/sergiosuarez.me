@@ -47,7 +47,7 @@ export default function MIM({ data }) {
   }
 
   return (
-    <Layout>
+    <Layout pageTitle="MIM • Sergio">
       <StyledMIM>
         <Title>Master Incident Manager</Title>
         <Row>

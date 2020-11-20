@@ -42,7 +42,7 @@ export default function Chatify({ data }) {
   }
 
   return (
-    <Layout>
+    <Layout pageTitle="Chatify • Sergio">
       <StyledMIM>
         <Title>Chatify</Title>
         <Row>

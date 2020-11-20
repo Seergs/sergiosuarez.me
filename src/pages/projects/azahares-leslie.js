@@ -40,7 +40,7 @@ export default function AzaharesLeslie({ data }) {
   }
 
   return (
-    <Layout>
+    <Layout pageTitle="Azahares Leslie • Sergio">
       <StyledMIM>
         <Title>Azahares Leslie</Title>
         <Row>

@@ -2,7 +2,10 @@ module.exports = {
   siteMetadata: {
     title: `Sergio Suárez`,
     description: `Sergio Suárez Portfolio website`,
-    author: `@seergs`,
+    url: "https://sergiosuarez.me",
+    image: "/logo.svg",
+    twitterUsername: "@Seergstate",
+    author: `@Seergstate`,
     languages: {
       langs: ["en", "es"],
       defaultLangKey: "en",
@@ -13,6 +16,7 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-styled-components`,
+    `gatsby-plugin-netlify`,
     {
       resolve: `gatsby-plugin-intl`,
       options: {

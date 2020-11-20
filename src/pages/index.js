@@ -13,7 +13,7 @@ const IndexPage = ({ data }) => {
   const images = data.allImageSharp.edges.map((edge) => edge.node.fluid);
   const resumeLink = data.allFile.edges[0].node.publicURL;
   return (
-    <Layout>
+    <Layout pageTitle="Sergio Suárez">
       <Introduction />
       <About resumeLink={resumeLink} />
       <Skills />
