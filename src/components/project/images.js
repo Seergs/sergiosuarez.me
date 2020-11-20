@@ -2,6 +2,7 @@ import React from "react";
 import styled, { css } from "styled-components/macro";
 import Image from "gatsby-image";
 import generateAltTexts from "../../utils/generateAltTexts";
+import { mediaQueries } from "../../theme/breakpoints";
 
 const ImagesContainer = styled.section`
   display: grid;
@@ -14,6 +15,11 @@ const ImagesContainer = styled.section`
     css`
       grid-template-rows: 3fr 1fr;
     `}
+
+  ${mediaQueries("lg")`
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  `}
 `;
 
 const ImageWrapper = styled.div`

@@ -2,13 +2,22 @@ import React from "react";
 import styled, { css } from "styled-components/macro";
 import useTranslation from "../../hooks/useTranslation";
 import Subtitle from "../subtitle";
+import { mediaQueries } from "../../theme/breakpoints";
 
-const Wrapper = styled.div``;
+const Wrapper = styled.div`
+  ${mediaQueries("xl")`
+    margin-top: 4rem;
+  `}
+`;
 
 const List = styled.ul`
   columns: 2;
   list-style-type: none;
   margin-left: 1.5rem;
+
+  ${mediaQueries("xl")`
+    max-width: 400px;
+  `}
 `;
 
 const ListItem = styled.li`

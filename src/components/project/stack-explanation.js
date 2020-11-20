@@ -4,6 +4,7 @@ import Subtitle from "../subtitle";
 import Text from "../text";
 import useTranslation from "../../hooks/useTranslation";
 import mixins from "../../theme/mixins";
+import { mediaQueries } from "../../theme/breakpoints";
 
 const { flexRow, alignCenter } = mixins;
 
@@ -26,11 +27,20 @@ const TechName = styled.h3`
 const Row = styled.div`
   ${flexRow};
   ${alignCenter};
-  gap: 5rem;
   svg {
-    width: 40px;
+    margin-right: 4rem;
     height: 40px;
+    width: 40px;
+
+    ${mediaQueries("md")`
+    display:none;
+    `}
   }
+`;
+
+const IconWrapper = styled.div`
+  ${flexRow};
+  ${alignCenter};
 `;
 
 export default function StackExplanation({ stack }) {
@@ -45,7 +55,9 @@ export default function StackExplanation({ stack }) {
             <ListItem key={tech.name}>
               <TechName>{tech.name}</TechName>
               <Row>
-                <tech.Icon />
+                <IconWrapper>
+                  <tech.Icon />
+                </IconWrapper>
                 <Text>{t(tech.textId)}</Text>
               </Row>
             </ListItem>

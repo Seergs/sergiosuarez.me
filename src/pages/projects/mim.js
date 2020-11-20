@@ -18,6 +18,7 @@ import mixins from "../../theme/mixins";
 import FlaskIcon from "../../svg/flask.svg";
 import AzureIcon from "../../svg/azure.svg";
 import { graphql } from "gatsby";
+import { mediaQueries } from "../../theme/breakpoints";
 const { flexRow, justifyBetween } = mixins;
 
 const StyledMIM = styled.div``;
@@ -26,6 +27,10 @@ const Row = styled.div`
   ${flexRow};
   ${justifyBetween};
   margin: 3rem 0;
+
+  ${mediaQueries("xl")`
+    flex-direction: column;
+  `}
 `;
 
 export default function MIM({ data }) {
