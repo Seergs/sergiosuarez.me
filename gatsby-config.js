@@ -12,11 +12,6 @@ module.exports = {
     },
   },
   plugins: [
-    `gatsby-plugin-react-helmet`,
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
-    `gatsby-plugin-styled-components`,
-    `gatsby-plugin-netlify`,
     {
       resolve: `gatsby-plugin-intl`,
       options: {
@@ -56,5 +51,26 @@ module.exports = {
         path: `${__dirname}/src/files`,
       },
     },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: "Sergio Suárez",
+        short_name: "Sergio Suárez",
+        start_url: "/",
+        display: "standalone",
+        icon: "src/svg/logo-dark.svg",
+      },
+    },
+    {
+      resolve: `gatsby-plugin-offline`,
+      options: {
+        precachePages: [`/*`],
+      },
+    },
+    `gatsby-plugin-react-helmet`,
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
+    `gatsby-plugin-styled-components`,
+    `gatsby-plugin-netlify`,
   ],
 };

@@ -16,6 +16,7 @@ import useTranslation from "../../hooks/useTranslation";
 import mixins from "../../theme/mixins";
 import GatsbyIcon from "../../svg/gatsby.svg";
 import { graphql } from "gatsby";
+import { mediaQueries } from "../../theme/breakpoints";
 const { flexRow, justifyBetween } = mixins;
 
 const StyledMIM = styled.div``;
@@ -24,6 +25,9 @@ const Row = styled.div`
   ${flexRow};
   ${justifyBetween};
   margin: 4rem 0;
+  ${mediaQueries("xl")`
+    flex-direction: column;
+  `}
 `;
 
 export default function Chatify({ data }) {

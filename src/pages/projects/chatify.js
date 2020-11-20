@@ -18,6 +18,7 @@ import mixins from "../../theme/mixins";
 import NodeIcon from "../../svg/node.svg";
 import SocketIcon from "../../svg/socketio.svg";
 import { graphql } from "gatsby";
+import { mediaQueries } from "../../theme/breakpoints";
 const { flexRow, justifyBetween } = mixins;
 
 const StyledMIM = styled.div``;
@@ -26,6 +27,9 @@ const Row = styled.div`
   ${flexRow};
   ${justifyBetween};
   margin: 4rem 0;
+  ${mediaQueries("xl")`
+    flex-direction: column;
+  `}
 `;
 
 export default function Chatify({ data }) {

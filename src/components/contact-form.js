@@ -86,7 +86,11 @@ const Label = styled.label`
   `}
 `;
 
-const Error = styled.span``;
+const Error = styled.span`
+  margin: 1rem 0;
+  color: #991b1b;
+  font-weight: 700;
+`;
 
 const Button = styled(motion.button)`
   ${(props) => css`
@@ -193,7 +197,11 @@ export default function ContactForm() {
       data-netlify="true"
       name="contact-form"
       onSubmit={handleSubmit}
+      method="post"
+      netlify-honeypot="bot-field"
     >
+      <input type="hidden" name="bot-field" />
+      <input type="hidden" name="form-name" value="contact-form" />
       <Row>
         <Col>
           <Label htmlFor="name">{t("home.contact.label_1")}</Label>

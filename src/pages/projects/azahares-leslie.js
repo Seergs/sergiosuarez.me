@@ -15,6 +15,7 @@ import {
 import styled from "styled-components/macro";
 import useTranslation from "../../hooks/useTranslation";
 import mixins from "../../theme/mixins";
+import { mediaQueries } from "../../theme/breakpoints";
 import { graphql } from "gatsby";
 const { flexRow, justifyBetween } = mixins;
 
@@ -24,6 +25,10 @@ const Row = styled.div`
   ${flexRow};
   ${justifyBetween};
   margin: 4rem 0;
+
+  ${mediaQueries("xl")`
+    flex-direction: column;
+  `}
 `;
 
 export default function AzaharesLeslie({ data }) {

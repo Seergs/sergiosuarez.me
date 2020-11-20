@@ -1,11 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useLocation } from "@reach/router";
 import { useStaticQuery, graphql } from "gatsby";
 import { Helmet } from "react-helmet";
+import { ThemeContext } from "../context/theme-context";
 
 export default function SEO({ title, description, image }) {
   const { pathname } = useLocation();
   const { site } = useStaticQuery(query);
+  const { colorMode } = useContext(ThemeContext);
 
   const {
     defaultTitle,
@@ -24,6 +26,10 @@ export default function SEO({ title, description, image }) {
     <Helmet title={seo.title}>
       <meta name="description" content={seo.description} />
       <meta name="image" content={seo.image} />
+      <meta
+        name="theme-color"
+        content={colorMode === "light" ? "#fff" : "#0F172A"}
+      />
       {seo.url && <meta property="og:url" content={seo.url} />}
       {seo.title && <meta property="og:title" content={seo.title} />}
       {seo.description && (
