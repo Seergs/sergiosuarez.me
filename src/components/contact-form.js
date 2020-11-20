@@ -131,8 +131,16 @@ export default function ContactForm() {
       method="post"
       data-netlify="true"
       onSubmit="submit"
+      data-netlify-honeypot="bot-field"
     >
       <input type="hidden" name="form-name" value="contact-form" />
+
+      <div hidden>
+        <label>
+          Don't fill this out: <input name="bot-field" />
+        </label>
+      </div>
+
       <Row>
         <Col>
           <Label htmlFor="name">{t("home.contact.label_1")}</Label>
