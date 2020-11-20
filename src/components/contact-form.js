@@ -163,44 +163,14 @@ export default function ContactForm() {
     onSubmit,
   });
 
-  const encode = (data) => {
-    return Object.keys(data)
-      .map(
-        (key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
-      )
-      .join();
-  };
-
-  const contactForm = useRef();
-
-  function onSubmit() {
-    const form = contactForm.current;
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({
-        "form-name": form.getAttribute("name"),
-        ...values,
-      }),
-    })
-      .then(() => {
-        setIsSubmitted(true);
-        setError(false);
-      })
-      .catch((err) => {
-        setError(true);
-      });
-  }
   return (
     <Form
       ref={contactForm}
-      data-netlify="true"
       name="contact-form"
-      onSubmit={handleSubmit}
       method="post"
-      netlify-honeypot="bot-field"
+      data-netlify="true"
+      onSubmit="submit"
     >
-      <input type="hidden" name="bot-field" />
       <input type="hidden" name="form-name" value="contact-form" />
       <Row>
         <Col>
@@ -237,6 +207,7 @@ export default function ContactForm() {
       ) : (
         <SuccessMessage style={{ marginTop: "1.5rem" }}>
           <Button
+            type="submit"
             disabled={isSubmitted}
             animate={
               isSubmitted
