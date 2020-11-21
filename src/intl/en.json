@@ -109,7 +109,7 @@
     "hp": {
       "description": "A fun website for all Potterheads out there where you can discover fun facts, see info about the Hogwarts Houses and even discover what house you belong to.",
       "stack": {
-        "gatsby": "I chose Gatsby for this static site since it is one of the best frameworks for React and helps you build blazing flast websites."
+        "gatsby": "I chose Gatsby for this static site since it is one of the best frameworks for React and helps you build blazing fast websites."
       },
       "motivation": "I'm a Potterhead myself so it was a good opotunity to show it off and look into Gatsby since I've seen a lot of people talk about how you can build super fast static websites with it, I tried it out and I had an amazing experience.",
       "solution": {
