@@ -150,6 +150,7 @@ export default function ContactForm() {
             value={values.name}
             onChange={handleChange}
             name="name"
+            required
           />
         </Col>
         <Col>
@@ -160,6 +161,7 @@ export default function ContactForm() {
             name="email"
             value={values.email}
             onChange={handleChange}
+            required
           />
         </Col>
       </Row>
@@ -170,6 +172,7 @@ export default function ContactForm() {
         name="message"
         value={values.message}
         onChange={handleChange}
+        required
       />
       <Button type="submit">{t("home.contact.button_text")}</Button>
     </Form>
