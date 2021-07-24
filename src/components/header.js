@@ -3,7 +3,7 @@ import LogoDark from "../svg/logo-dark.svg";
 import LogoLight from "../svg/logo-light.svg";
 import styled from "styled-components/macro";
 import { ThemeContext } from "../context/theme-context";
-import { Link } from "gatsby";
+import { Link as GatsbyLink } from "gatsby";
 import LanguageSwitcher from "./lang-switcher";
 import mixins from "../theme/mixins";
 import { useLocation } from "@reach/router";
@@ -11,7 +11,14 @@ import ThemeSwitch from "./theme-switch";
 const { justifyBetween, flexRow, alignCenter } = mixins;
 
 const Wrapper = styled.header`
-  margin-bottom: 4rem;
+  position: sticky;
+  margin-bottom: 2rem;
+  margin-top: 1em;
+  padding: 10px 0;
+  top: 0;
+  background-color: var(--color-background);
+  z-index: 3;
+  opacity: 0.98;
   ${flexRow};
   ${justifyBetween};
 `;
@@ -31,6 +38,11 @@ const Container = styled.div`
   ${alignCenter};
   gap: 2rem;
 `;
+
+const Link = styled(GatsbyLink)`
+  ${flexRow};
+  ${alignCenter};
+`
 
 export default function Header() {
   const { colorMode } = React.useContext(ThemeContext);

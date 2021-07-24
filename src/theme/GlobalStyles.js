@@ -5,6 +5,7 @@ const GlobalStyles = createGlobalStyle`
 ${(props) => css`
   body {
     padding: 2rem;
+    padding-top: 0;
     max-width: 1200px;
     margin: 0 auto;
     background-color: var(--color-background);

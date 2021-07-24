@@ -21,7 +21,10 @@ const StyledSwitch = styled.button`
   }
 `;
 
-const Icon = styled(motion.div)``;
+const Icon = styled(motion.div)`
+  ${flexRow};
+  ${alignCenter};
+`;
 
 export default function ThemeSwitch() {
   const { colorMode, setColorMode } = useContext(ThemeContext);
