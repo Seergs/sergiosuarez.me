@@ -85,7 +85,7 @@ const ImageContainer = styled(Link)`
   }
 
   &:hover {
-    transform: scale(1.01);
+    transform: translateY(-10px);
   }
 `;
 
