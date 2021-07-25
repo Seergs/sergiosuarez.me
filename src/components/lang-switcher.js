@@ -35,8 +35,8 @@ const StyledLanguageSwitcher = styled.button`
 
 const LanguagesList = styled(motion.ul)`
   position: absolute;
-  bottom: -4rem;
-  list-style-type: circle;
+  top: 1.5rem;
+  list-style-type: none;
 `;
 
 const LanguageListItem = styled.li`
@@ -50,6 +50,8 @@ const Link = styled(GatsbyLink)`
     display: inline-block;
     color: var(--color-headings);
     font-size: 0.9rem;
+    ${flexRow};
+    ${alignCenter};
     &::after {
       position: absolute;
       content: "";
@@ -77,6 +79,16 @@ const SvgWrapper = styled(motion.div)`
     fill: var(--color-text);
   }
 `;
+
+const StyledUSFlag = styled(USFlag)`
+  width: 20px;
+  margin-left: 3px;
+`
+
+const StyledSpainFlag = styled(SpainFlag)`
+  width: 20px;
+  margin-left: 3px;
+`
 
 export default function LangSwitcher() {
   const [isDropdownOpen, setIsDropdowOpen] = useState(false);
@@ -124,7 +136,7 @@ export default function LangSwitcher() {
                   title={t("english")}
                   to={createChangeLangLink({ pathname, newPath: "en" })}
                 >
-                  EN
+                  EN <StyledUSFlag />
                 </Link>
               </LanguageListItem>
               <LanguageListItem>
@@ -132,7 +144,7 @@ export default function LangSwitcher() {
                   title={t("spanish")}
                   to={createChangeLangLink({ pathname, newPath: "es" })}
                 >
-                  ES
+                  ES <StyledSpainFlag />
                 </Link>
               </LanguageListItem>
             </LanguagesList>
