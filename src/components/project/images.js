@@ -1,8 +1,8 @@
-import React from "react";
-import styled, { css } from "styled-components/macro";
-import Image from "gatsby-image";
-import generateAltTexts from "../../utils/generateAltTexts";
-import { mediaQueries } from "../../theme/breakpoints";
+import React from 'react';
+import styled, { css } from 'styled-components/macro';
+import Image from 'gatsby-image';
+import generateAltTexts from '../../utils/generateAltTexts';
+import { mediaQueries } from '../../theme/breakpoints.ts';
 
 const ImagesContainer = styled.section`
   display: grid;
@@ -10,13 +10,12 @@ const ImagesContainer = styled.section`
   grid-template-rows: 2fr 1fr 2fr;
   margin: 4rem 0;
 
-  ${(props) =>
-    props.isTwoRows &&
-    css`
+  ${(props) => props.isTwoRows
+    && css`
       grid-template-rows: 3fr 1fr;
     `}
 
-  ${mediaQueries("lg")`
+  ${mediaQueries('lg')`
     grid-template-columns: 1fr;
     grid-template-rows: auto;
   `}
@@ -37,14 +36,12 @@ const ImageWrapper = styled.div`
 export default function Images({ images, projectName }) {
   const altTexts = generateAltTexts(images);
   return (
-    <ImagesContainer isTwoRows={projectName === "chatify"}>
-      {images.map((image, i) => {
-        return (
-          <ImageWrapper key={`altTexts.${projectName}.${i}`}>
-            <Image fluid={image} alt={altTexts[projectName]} />
-          </ImageWrapper>
-        );
-      })}
+    <ImagesContainer isTwoRows={projectName === 'chatify'}>
+      {images.map((image) => (
+        <ImageWrapper key={image.originalName}>
+          <Image fluid={image} alt={altTexts[projectName]} />
+        </ImageWrapper>
+      ))}
     </ImagesContainer>
   );
 }

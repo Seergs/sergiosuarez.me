@@ -1,12 +1,15 @@
-import React from "react";
-import styled, { css } from "styled-components";
-import useTranslation from "../hooks/useTranslation";
-import mixins from "../theme/mixins";
-import { motion } from "framer-motion";
-import useForm from "../hooks/useForm";
-import Text from "./text";
-import { mediaQueries } from "../theme/breakpoints";
-const { flexRow, alignCenter, justifyCenter, flexColumn } = mixins;
+import React from 'react';
+import styled, { css } from 'styled-components';
+import { motion } from 'framer-motion';
+import useTranslation from '../hooks/useTranslation';
+import mixins from '../theme/mixins';
+import useForm from '../hooks/useForm';
+import Text from './text';
+import { mediaQueries } from '../theme/breakpoints.ts';
+
+const {
+  flexRow, alignCenter, justifyCenter, flexColumn,
+} = mixins;
 
 const Form = styled.form`
   margin-top: 4rem;
@@ -22,7 +25,7 @@ const Row = styled.div`
   ${alignCenter};
   gap: 1.5rem;
 
-  ${mediaQueries("xl")`
+  ${mediaQueries('xl')`
     flex-direction:column;
     align-items:flex-start;
   `}
@@ -41,34 +44,32 @@ const Input = styled.input`
     color: var(--color-headings);
     border-radius: 3px;
     padding: 0 10px;
-    ${props.type === "text"
-      ? css`
+    ${props.type === 'text'
+    ? css`
           width: 380px;
         `
-      : css`
+    : css`
           width: 500px;
         `}
   `}
 
-  ${mediaQueries("lg")`
+  ${mediaQueries('lg')`
     width: 100%;
   `}
 `;
 
 const Message = styled.textarea`
-  ${(props) => css`
-    width: 700px;
-    border: 1px solid var(--color-inputOutline);
-    background-color: var(--color-inputBackground);
-    color: var(--color-headings);
-    resize: none;
-    border-radius: 3px;
-    padding: 10px;
+  width: 700px;
+  border: 1px solid var(--color-inputOutline);
+  background-color: var(--color-inputBackground);
+  color: var(--color-headings);
+  resize: none;
+  border-radius: 3px;
+  padding: 10px;
 
-    ${mediaQueries("lg")`
-      width: 100%;
-     `}
-  `}
+  ${mediaQueries('lg')`
+    width: 100%;
+    `}
 `;
 
 const Label = styled.label`
@@ -78,39 +79,37 @@ const Label = styled.label`
     color: var(--color-headings);
     margin-bottom: 0.5rem;
 
-    ${props.htmlFor === "message" &&
-    css`
+    ${props.htmlFor === 'message'
+    && css`
       margin-top: 1.5rem;
     `}
   `}
 `;
 
 const Button = styled(motion.button)`
-  ${(props) => css`
-    width: 250px;
-    height: 48px;
-    font-weight: 600;
-    color: var(--color-contactButtonText);
-    background-color: var(--color-contactButtonBackground);
-    font-size: 0.9rem;
-    border-radius: 3px;
-    border: 0;
-    cursor: pointer;
-    margin-top: 2rem;
+  width: 250px;
+  height: 48px;
+  font-weight: 600;
+  color: var(--color-contactButtonText);
+  background-color: var(--color-contactButtonBackground);
+  font-size: 0.9rem;
+  border-radius: 3px;
+  border: 0;
+  cursor: pointer;
+  margin-top: 2rem;
 
-    ${flexRow};
-    ${alignCenter};
-    ${justifyCenter};
+  ${flexRow};
+  ${alignCenter};
+  ${justifyCenter};
 
-    &:hover {
-      filter: brightness(1.1);
-    }
+  &:hover {
+    filter: brightness(1.1);
+  }
 
-    ${mediaQueries("md")`
-      width: 100%;
-      margin-left: auto;
-      margin-right: auto;
-    `}
+  ${mediaQueries('md')`
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
   `}
 `;
 
@@ -119,9 +118,9 @@ export default function ContactForm() {
 
   const { values, handleChange } = useForm({
     initialValues: {
-      name: "",
-      email: "",
-      message: "",
+      name: '',
+      email: '',
+      message: '',
     },
   });
 
@@ -136,14 +135,15 @@ export default function ContactForm() {
       <input type="hidden" name="form-name" value="contact-form" />
 
       <div hidden>
-        <label>
-          Don't fill this out: <input name="bot-field" />
+        <label htmlFor="bot-field">
+          Don&apost fill this out:
+          <input name="bot-field" id="bot-field" />
         </label>
       </div>
 
       <Row>
         <Col>
-          <Label htmlFor="name">{t("home.contact.label_1")}</Label>
+          <Label htmlFor="name">{t('home.contact.label_1')}</Label>
           <Input
             type="text"
             id="name"
@@ -154,7 +154,7 @@ export default function ContactForm() {
           />
         </Col>
         <Col>
-          <Label htmlFor="email">{t("home.contact.label_2")}</Label>
+          <Label htmlFor="email">{t('home.contact.label_2')}</Label>
           <Input
             type="email"
             id="email"
@@ -165,7 +165,7 @@ export default function ContactForm() {
           />
         </Col>
       </Row>
-      <Label htmlFor="message">{t("home.contact.label_3")}</Label>
+      <Label htmlFor="message">{t('home.contact.label_3')}</Label>
       <Message
         rows="15"
         id="message"
@@ -174,7 +174,7 @@ export default function ContactForm() {
         onChange={handleChange}
         required
       />
-      <Button type="submit">{t("home.contact.button_text")}</Button>
+      <Button type="submit">{t('home.contact.button_text')}</Button>
     </Form>
   );
 }

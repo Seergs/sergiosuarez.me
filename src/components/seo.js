@@ -1,8 +1,22 @@
-import React, { useContext } from "react";
-import { useLocation } from "@reach/router";
-import { useStaticQuery, graphql } from "gatsby";
-import { Helmet } from "react-helmet";
-import { ThemeContext } from "../context/theme-context";
+import React, { useContext } from 'react';
+import { useLocation } from '@reach/router';
+import { useStaticQuery, graphql } from 'gatsby';
+import { Helmet } from 'react-helmet';
+import { ThemeContext } from '../context/theme-context';
+
+const query = graphql`
+  query SEO {
+    site {
+      siteMetadata {
+        defaultTitle: title
+        defaultDescription: description
+        siteUrl: url
+        defaultImage: image
+        twitterUsername
+      }
+    }
+  }
+`;
 
 export default function SEO({ title, description, image }) {
   const { pathname } = useLocation();
@@ -28,7 +42,7 @@ export default function SEO({ title, description, image }) {
       <meta name="image" content={seo.image} />
       <meta
         name="theme-color"
-        content={colorMode === "light" ? "#fff" : "#0F172A"}
+        content={colorMode === 'light' ? '#fff' : '#0F172A'}
       />
       {seo.url && <meta property="og:url" content={seo.url} />}
       {seo.title && <meta property="og:title" content={seo.title} />}
@@ -48,17 +62,3 @@ export default function SEO({ title, description, image }) {
     </Helmet>
   );
 }
-
-const query = graphql`
-  query SEO {
-    site {
-      siteMetadata {
-        defaultTitle: title
-        defaultDescription: description
-        siteUrl: url
-        defaultImage: image
-        twitterUsername
-      }
-    }
-  }
-`;

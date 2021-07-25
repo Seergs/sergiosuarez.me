@@ -1,8 +1,8 @@
-import React from "react";
-import styled from "styled-components/macro";
-import Link from "../link";
-import useTranslation from "../../hooks/useTranslation";
-import mixins from "../../theme/mixins";
+import React from 'react';
+import styled from 'styled-components/macro';
+import TextLink from '../link';
+import useTranslation from '../../hooks/useTranslation';
+import mixins from '../../theme/mixins';
 
 const { flexRow } = mixins;
 
@@ -21,17 +21,17 @@ export default function Links({
     <StyledLinks>
       {serverRepo && (
         <a href={serverRepo} target="_blank" rel="noreferrer">
-          <Link>Server repo</Link>
+          <TextLink>Server repo</TextLink>
         </a>
       )}
       {clientRepo && (
         <a href={clientRepo} target="_blank" rel="noreferrer">
-          <Link>Client repo</Link>
+          <TextLink>Client repo</TextLink>
         </a>
       )}
       {live && (
         <a href={live} target="_blank" rel="noreferrer">
-          <Link isPrimaryColor={true}>{t(`project_page.website`)}</Link>
+          <TextLink isPrimaryColor>{t('project_page.website')}</TextLink>
         </a>
       )}
     </StyledLinks>

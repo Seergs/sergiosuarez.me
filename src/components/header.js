@@ -1,13 +1,14 @@
-import React from "react";
-import LogoDark from "../svg/logo-dark.svg";
-import LogoLight from "../svg/logo-light.svg";
-import styled from "styled-components/macro";
-import { ThemeContext } from "../context/theme-context";
-import { Link as GatsbyLink } from "gatsby";
-import LanguageSwitcher from "./lang-switcher";
-import mixins from "../theme/mixins";
-import { useLocation } from "@reach/router";
-import ThemeSwitch from "./theme-switch";
+import React from 'react';
+import styled from 'styled-components/macro';
+import { Link as GatsbyLink } from 'gatsby';
+import { useLocation } from '@reach/router';
+import LogoDark from '../svg/logo-dark.svg';
+import LogoLight from '../svg/logo-light.svg';
+import { ThemeContext } from '../context/theme-context';
+import LanguageSwitcher from './lang-switcher';
+import mixins from '../theme/mixins';
+import ThemeSwitch from './theme-switch';
+
 const { justifyBetween, flexRow, alignCenter } = mixins;
 
 const Wrapper = styled.header`
@@ -42,15 +43,15 @@ const Container = styled.div`
 const Link = styled(GatsbyLink)`
   ${flexRow};
   ${alignCenter};
-`
+`;
 
 export default function Header() {
   const { colorMode } = React.useContext(ThemeContext);
   const { pathname } = useLocation();
   return (
     <Wrapper>
-      <Link to={pathname.includes("en") ? "/en" : "/es"}>
-        {colorMode === "light" ? <DarkLogo /> : <LightLogo />}
+      <Link to={pathname.includes('en') ? '/en' : '/es'}>
+        {colorMode === 'light' ? <DarkLogo /> : <LightLogo />}
       </Link>
       <Container>
         <LanguageSwitcher />

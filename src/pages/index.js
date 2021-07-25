@@ -1,4 +1,5 @@
-import React from "react";
+import React from 'react';
+import { graphql } from 'gatsby';
 import {
   Introduction,
   Layout,
@@ -6,8 +7,7 @@ import {
   Skills,
   Projects,
   Contact,
-} from "../components";
-import { graphql } from "gatsby";
+} from '../components';
 
 const IndexPage = ({ data }) => {
   const images = data.allImageSharp.edges.map((edge) => edge.node.fluid);

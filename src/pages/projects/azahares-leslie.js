@@ -1,4 +1,6 @@
-import React from "react";
+import React from 'react';
+import styled from 'styled-components/macro';
+import { graphql } from 'gatsby';
 import {
   Layout,
   Title,
@@ -11,12 +13,11 @@ import {
   Images,
   Description,
   Links,
-} from "../../components";
-import styled from "styled-components/macro";
-import useTranslation from "../../hooks/useTranslation";
-import mixins from "../../theme/mixins";
-import { mediaQueries } from "../../theme/breakpoints";
-import { graphql } from "gatsby";
+} from '../../components';
+import useTranslation from '../../hooks/useTranslation';
+import mixins from '../../theme/mixins';
+import { mediaQueries } from '../../theme/breakpoints.ts';
+
 const { flexRow, justifyBetween } = mixins;
 
 const StyledMIM = styled.div``;
@@ -26,10 +27,18 @@ const Row = styled.div`
   ${justifyBetween};
   margin: 4rem 0;
 
-  ${mediaQueries("xl")`
+  ${mediaQueries('xl')`
     flex-direction: column;
   `}
 `;
+
+const stack = [
+  {
+    name: 'React',
+    textId: 'project_page.azahares.stack.react',
+    Icon: ReactIcon,
+  },
+];
 
 export default function AzaharesLeslie({ data }) {
   const { t } = useTranslation();
@@ -37,7 +46,7 @@ export default function AzaharesLeslie({ data }) {
 
   function features() {
     const f = [];
-    for (let i = 0; i < 3; ++i) {
+    for (let i = 0; i < 3; i += 1) {
       f.push(t(`project_page.azahares.solution.list.${i + 1}`));
     }
 
@@ -53,11 +62,11 @@ export default function AzaharesLeslie({ data }) {
             <Links live="https://azaharesleslie.netlify.app/" />
           </Description>
           <StackCollapsed
-            stack={["React", "Netlify", "styled-components", "framer-motion"]}
+            stack={['React', 'Netlify', 'styled-components', 'framer-motion']}
           />
         </Row>
         <Row>
-          <Motivation text={t("project_page.azahares.motivation")} />
+          <Motivation text={t('project_page.azahares.motivation')} />
         </Row>
         <StackExplanation stack={stack} />
         <Solution project="azahares" />
@@ -84,11 +93,3 @@ export const pageQuery = graphql`
     }
   }
 `;
-
-const stack = [
-  {
-    name: "React",
-    textId: "project_page.azahares.stack.react",
-    Icon: ReactIcon,
-  },
-];

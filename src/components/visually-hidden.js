@@ -1,5 +1,6 @@
-import * as React from "react";
-import styled from "styled-components";
+/* eslint-disable no-undef */
+import * as React from 'react';
+import styled from 'styled-components';
 
 const Wrapper = styled.span`
   display: inline-block;
@@ -13,29 +14,30 @@ const Wrapper = styled.span`
   border: 0;
 `;
 
-export default function VisuallyHidden({ children, ...rest }) {
+export default function VisuallyHidden({ children }) {
   const [forceShow, setForceShow] = React.useState(false);
 
+  // eslint-disable-next-line consistent-return
   React.useEffect(() => {
-    if (process.env.NODE_ENV !== "production") {
+    if (process.env.NODE_ENV !== 'production') {
       const handleKeyDown = (e) => {
-        if (e.key === "Alt") {
+        if (e.key === 'Alt') {
           setForceShow(true);
         }
       };
 
       const handleKeyUp = (e) => {
-        if (e.key === "Alt") {
+        if (e.key === 'Alt') {
           setForceShow(false);
         }
       };
 
-      window.addEventListener("keydown", handleKeyDown);
-      window.addEventListener("keyup", handleKeyUp);
+      window.addEventListener('keydown', handleKeyDown);
+      window.addEventListener('keyup', handleKeyUp);
 
       return () => {
-        window.removeEventListener("keydown", handleKeyDown);
-        window.removeEventListener("keyup", handleKeyUp);
+        window.removeEventListener('keydown', handleKeyDown);
+        window.removeEventListener('keyup', handleKeyUp);
       };
     }
   }, []);
@@ -43,5 +45,5 @@ export default function VisuallyHidden({ children, ...rest }) {
   if (forceShow) {
     return children;
   }
-  return <Wrapper {...rest}>{children}</Wrapper>;
+  return <Wrapper>{children}</Wrapper>;
 }

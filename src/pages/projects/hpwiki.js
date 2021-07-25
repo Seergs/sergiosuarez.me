@@ -1,4 +1,6 @@
-import React from "react";
+import React from 'react';
+import styled from 'styled-components/macro';
+import { graphql } from 'gatsby';
 import {
   Layout,
   Title,
@@ -10,13 +12,12 @@ import {
   Images,
   Description,
   Links,
-} from "../../components";
-import styled from "styled-components/macro";
-import useTranslation from "../../hooks/useTranslation";
-import mixins from "../../theme/mixins";
-import GatsbyIcon from "../../svg/gatsby.svg";
-import { graphql } from "gatsby";
-import { mediaQueries } from "../../theme/breakpoints";
+} from '../../components';
+import useTranslation from '../../hooks/useTranslation';
+import mixins from '../../theme/mixins';
+import GatsbyIcon from '../../svg/gatsby.svg';
+import { mediaQueries } from '../../theme/breakpoints.ts';
+
 const { flexRow, justifyBetween } = mixins;
 
 const StyledMIM = styled.div``;
@@ -25,10 +26,18 @@ const Row = styled.div`
   ${flexRow};
   ${justifyBetween};
   margin: 4rem 0;
-  ${mediaQueries("xl")`
+  ${mediaQueries('xl')`
     flex-direction: column;
   `}
 `;
+
+const stack = [
+  {
+    name: 'Gatsby',
+    textId: 'project_page.hp.stack.gatsby',
+    Icon: GatsbyIcon,
+  },
+];
 
 export default function Chatify({ data }) {
   const { t } = useTranslation();
@@ -36,7 +45,7 @@ export default function Chatify({ data }) {
 
   function features() {
     const f = [];
-    for (let i = 0; i < 3; ++i) {
+    for (let i = 0; i < 3; i += 1) {
       f.push(t(`project_page.hp.solution.list.${i + 1}`));
     }
 
@@ -55,11 +64,11 @@ export default function Chatify({ data }) {
             />
           </Description>
           <StackCollapsed
-            stack={["Gatsby", "Netlify", "styled-components", "framer-motion"]}
+            stack={['Gatsby', 'Netlify', 'styled-components', 'framer-motion']}
           />
         </Row>
         <Row>
-          <Motivation text={t("project_page.hp.motivation")} />
+          <Motivation text={t('project_page.hp.motivation')} />
         </Row>
         <StackExplanation stack={stack} />
         <Solution project="hp" />
@@ -84,11 +93,3 @@ export const pageQuery = graphql`
     }
   }
 `;
-
-const stack = [
-  {
-    name: "Gatsby",
-    textId: "project_page.hp.stack.gatsby",
-    Icon: GatsbyIcon,
-  },
-];

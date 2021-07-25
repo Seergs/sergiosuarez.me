@@ -1,4 +1,4 @@
-import { useIntl } from "gatsby-plugin-intl";
+import { useIntl } from 'gatsby-plugin-intl';
 
 function useTranslation() {
   const intl = useIntl();

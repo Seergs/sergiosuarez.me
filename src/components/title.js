@@ -1,9 +1,7 @@
-import styled, { css } from "styled-components/macro";
+import styled from 'styled-components/macro';
 
 const Title = styled.h1`
-  ${(props) => css`
-    color: var(--color-headings);
-  `}
+  color: var(--color-headings);
 `;
 
 export default Title;

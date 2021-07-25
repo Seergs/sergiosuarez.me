@@ -1,4 +1,6 @@
-import React from "react";
+import React from 'react';
+import styled from 'styled-components/macro';
+import { graphql } from 'gatsby';
 import {
   Layout,
   Title,
@@ -11,14 +13,13 @@ import {
   Images,
   Description,
   Links,
-} from "../../components";
-import styled from "styled-components/macro";
-import useTranslation from "../../hooks/useTranslation";
-import mixins from "../../theme/mixins";
-import FlaskIcon from "../../svg/flask.svg";
-import AzureIcon from "../../svg/azure.svg";
-import { graphql } from "gatsby";
-import { mediaQueries } from "../../theme/breakpoints";
+} from '../../components';
+import useTranslation from '../../hooks/useTranslation';
+import mixins from '../../theme/mixins';
+import FlaskIcon from '../../svg/flask.svg';
+import AzureIcon from '../../svg/azure.svg';
+import { mediaQueries } from '../../theme/breakpoints.ts';
+
 const { flexRow, justifyBetween } = mixins;
 
 const StyledMIM = styled.div``;
@@ -28,10 +29,28 @@ const Row = styled.div`
   ${justifyBetween};
   margin: 3rem 0;
 
-  ${mediaQueries("xl")`
+  ${mediaQueries('xl')`
     flex-direction: column;
   `}
 `;
+
+const stack = [
+  {
+    name: 'React',
+    textId: 'project_page.mim.stack.react',
+    Icon: ReactIcon,
+  },
+  {
+    name: 'Flask',
+    textId: 'project_page.mim.stack.flask',
+    Icon: FlaskIcon,
+  },
+  {
+    name: 'Azure',
+    textId: 'project_page.mim.stack.azure',
+    Icon: AzureIcon,
+  },
+];
 
 export default function MIM({ data }) {
   const { t } = useTranslation();
@@ -39,7 +58,7 @@ export default function MIM({ data }) {
 
   function features() {
     const f = [];
-    for (let i = 0; i < 6; ++i) {
+    for (let i = 0; i < 6; i += 1) {
       f.push(t(`project_page.mim.solution.list.${i + 1}`));
     }
 
@@ -55,11 +74,11 @@ export default function MIM({ data }) {
             <Links live="https://master-incident-management.netlify.app/" />
           </Description>
           <StackCollapsed
-            stack={["React", "Flask", "Azure", "MongoDB", "Netlify", "Heroku"]}
+            stack={['React', 'Flask', 'Azure', 'MongoDB', 'Netlify', 'Heroku']}
           />
         </Row>
         <Row>
-          <Motivation text={t("project_page.mim.motivation")} />
+          <Motivation text={t('project_page.mim.motivation')} />
         </Row>
         <StackExplanation stack={stack} />
         <Solution project="mim" />
@@ -84,21 +103,3 @@ export const pageQuery = graphql`
     }
   }
 `;
-
-const stack = [
-  {
-    name: "React",
-    textId: "project_page.mim.stack.react",
-    Icon: ReactIcon,
-  },
-  {
-    name: "Flask",
-    textId: "project_page.mim.stack.flask",
-    Icon: FlaskIcon,
-  },
-  {
-    name: "Azure",
-    textId: "project_page.mim.stack.azure",
-    Icon: AzureIcon,
-  },
-];

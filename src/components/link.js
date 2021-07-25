@@ -1,15 +1,16 @@
-import React from "react";
-import styled, { css } from "styled-components/macro";
-import Chevron from "../svg/chevron.svg";
-import mixins from "../theme/mixins";
+import React from 'react';
+import styled, { css } from 'styled-components/macro';
+import Chevron from '../svg/chevron.svg';
+import mixins from '../theme/mixins';
+
 const { justifyCenter, alignCenter } = mixins;
 
-export const StyledLink = styled.span`
+export const StyledTextLink = styled.span`
   ${(props) => css`
     position: relative;
     color: ${props.isPrimaryColor
-      ? "var(--color-primary)"
-      : "var(--color-headings)"};
+    ? 'var(--color-primary)'
+    : 'var(--color-headings)'};
     font-weight: 600;
     ${justifyCenter};
     ${alignCenter};
@@ -30,8 +31,8 @@ export const StyledLink = styled.span`
       width: 0;
       height: 3px;
       background-color: ${props.isPrimaryColor
-        ? "var(--color-primary)"
-        : "var(--color-headings)"};
+    ? 'var(--color-primary)'
+    : 'var(--color-headings)'};
       transition: all 0.2s ease-in-out;
     }
 
@@ -43,17 +44,17 @@ export const StyledLink = styled.span`
 
     svg > path {
       fill: ${props.isPrimaryColor
-        ? "var(--color-primary)"
-        : "var(--color-headings)"};
+    ? 'var(--color-primary)'
+    : 'var(--color-headings)'};
     }
   `}
 `;
 
-export default function Link({ children, isPrimaryColor = false }) {
+export default function TextLink({ children, isPrimaryColor = false }) {
   return (
-    <StyledLink isPrimaryColor={isPrimaryColor}>
+    <StyledTextLink isPrimaryColor={isPrimaryColor}>
       {children}
       <Chevron />
-    </StyledLink>
+    </StyledTextLink>
   );
 }

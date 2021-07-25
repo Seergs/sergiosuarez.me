@@ -1,10 +1,10 @@
-import React from "react";
-import styled from "styled-components/macro";
-import Subtitle from "../subtitle";
-import Text from "../text";
-import useTranslation from "../../hooks/useTranslation";
-import mixins from "../../theme/mixins";
-import { mediaQueries } from "../../theme/breakpoints";
+import React from 'react';
+import styled from 'styled-components/macro';
+import Subtitle from '../subtitle';
+import Text from '../text';
+import useTranslation from '../../hooks/useTranslation';
+import mixins from '../../theme/mixins';
+import { mediaQueries } from '../../theme/breakpoints.ts';
 
 const { flexRow, alignCenter } = mixins;
 
@@ -32,7 +32,7 @@ const Row = styled.div`
     height: 40px;
     width: 40px;
 
-    ${mediaQueries("md")`
+    ${mediaQueries('md')`
     display:none;
     `}
   }
@@ -48,21 +48,19 @@ export default function StackExplanation({ stack }) {
 
   return (
     <StyledExplanation>
-      <Subtitle>{t("project_page.stack_explanation_title")}</Subtitle>
+      <Subtitle>{t('project_page.stack_explanation_title')}</Subtitle>
       <List>
-        {stack.map((tech) => {
-          return (
-            <ListItem key={tech.name}>
-              <TechName>{tech.name}</TechName>
-              <Row>
-                <IconWrapper>
-                  <tech.Icon />
-                </IconWrapper>
-                <Text>{t(tech.textId)}</Text>
-              </Row>
-            </ListItem>
-          );
-        })}
+        {stack.map((tech) => (
+          <ListItem key={tech.name}>
+            <TechName>{tech.name}</TechName>
+            <Row>
+              <IconWrapper>
+                <tech.Icon />
+              </IconWrapper>
+              <Text>{t(tech.textId)}</Text>
+            </Row>
+          </ListItem>
+        ))}
       </List>
     </StyledExplanation>
   );
