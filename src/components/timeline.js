@@ -24,6 +24,7 @@ const TimelineItemPositionWrapper = styled.div`
 const TimelineItemPosition = styled.div`
     margin-left: 10px;
     margin-bottom: .6em;
+    pointer-events: none;
     ::before {
         position: absolute;
         content: '●';
