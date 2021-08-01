@@ -34,13 +34,15 @@
       "cisco": {
         "role": "Becario de software",
         "date_period": "Feb 2020 - Jun 2020",
-        "description": "Como parte de un equipo, diseñé y desarrollé una plataforma de software para dar tracking a incidentes dentro del área de Supply Chain de Cisco, esto ayudaría a los empleados a monitorear errores y analizar posibles soluciones para los nuevos incidentes en base en los historicos"
+        "description_short": "Durante 5 meses estuve trabajando al lado de otros 4 becarios muy talentosos para resolver una problemática que existía en el área de Supply Chain de Cisco, esto era, no había manera de llevar un tracking de los incidentes, errores y problemas que ocurrían a diario, por lo que era necesario crear una plataforma para satisfacer esta necesidad.",
+        "description": "Durante 5 meses estuve trabajando al lado de otros 4 becarios muy talentosos para resolver una problemática que existía en el área de Supply Chain de Cisco, esto era, no había manera de llevar un tracking de los incidentes, errores y problemas que ocurrían a diario, por lo que era necesario crear una plataforma para satisfacer esta necesidad. Estuve en constante colaboración, no solo con mi equipo de trabajo sino también con un mentor que teníamos asigando, el cual nos apoyó mucho y del cual aprendimos bastante. También con los líderes del proyecto, los cuales analizaban de vez en cuando nuestros avances y proponían cambios o incluían nuevos requerimientos para el sistema. Conocí a muchas personas, aprendí mucho y sobre todo, me divertí y fue una experiencia increíble."
       },
       "ibm": {
         "1": {
           "role": "Estudiante (software)",
           "date_period": "Feb 2021 - Jun 2021",
-          "description": "Estuve como estudiante"
+          "description_short": "Por 4 meses estuve de estudiante en un equipo, aquí trabajé con una aplicación ya existente donde los clientes de IBM compran software. Nunca había aprendido tanto como lo hice en esta etapa, ya que fue mi primera apoximación real a un trabajo en equipo mediante Scrum en un proyecto muy grande.",
+          "description": "Por 4 meses estuve de estudiante en un equipo, aquí trabajé con una aplicación ya existente donde los clientes de IBM compran software. Nunca había aprendido tanto como lo hice en esta etapa, ya que fue mi primera apoximación real a un trabajo en equipo mediante Scrum en un proyecto muy grande. Tuve la oportunidad de conocer a más desarrolladores, con mucha más experiencia, de los cuales aprendí muchísimo, no solo de desarrollo, sino de maneras de trabajo y cómo tener un buen balance trabajo-vida personal y estaré agradecido con ellos siempre. Aprendí no solo de programación, sino que también desarrollé como nunca mis soft skills, algo que hasta ese momento había descuidado. Desde un inició todos me apoyaron de gran manera y me implicaron en el proyecto como si fuera un developer más. No dejé de aprender en ese tiempo, y aunque la aplicación era gigantesca, en ningún momento me sentí presionado a hacer más de lo que podía. Aquí conocí a más students como yo y pasábamos buenos ratos"
         },
         "2": {
           "role": "Desarrollador de aplicaciones",
