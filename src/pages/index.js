@@ -8,6 +8,7 @@ import {
   Projects,
   Contact,
 } from '../components';
+import Timeline from '../components/timeline';
 
 const IndexPage = ({ data }) => {
   const images = data.allImageSharp.edges.map((edge) => edge.node.fluid);
@@ -17,6 +18,7 @@ const IndexPage = ({ data }) => {
       <Introduction />
       <About resumeLink={resumeLink} />
       <Skills />
+      <Timeline />
       <Projects images={images} />
       <Contact />
     </Layout>
