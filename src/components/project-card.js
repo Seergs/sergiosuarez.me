@@ -7,7 +7,7 @@ import Text from './text';
 import TextLink from './link';
 import useTranslation from '../hooks/useTranslation';
 import { createLink } from '../utils/create-link';
-import { mediaQueries } from '../theme/breakpoints.ts';
+import { mediaQueries } from '../theme/breakpoints';
 
 const ImageContainer = styled(Link)`
   border-radius: 5px;

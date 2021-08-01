@@ -4,7 +4,7 @@ import Subtitle from './subtitle';
 import useTranslation from '../hooks/useTranslation';
 import ProjectCard from './project-card';
 import generateAltTexts from '../utils/generateAltTexts';
-import { mediaQueries } from '../theme/breakpoints.ts';
+import { mediaQueries } from '../theme/breakpoints';
 
 const Wrapper = styled.div``;
 

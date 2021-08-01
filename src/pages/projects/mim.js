@@ -18,7 +18,7 @@ import useTranslation from '../../hooks/useTranslation';
 import mixins from '../../theme/mixins';
 import FlaskIcon from '../../svg/flask.svg';
 import AzureIcon from '../../svg/azure.svg';
-import { mediaQueries } from '../../theme/breakpoints.ts';
+import { mediaQueries } from '../../theme/breakpoints';
 
 const { flexRow, justifyBetween } = mixins;
 

@@ -6,7 +6,7 @@ import mixins from '../theme/mixins';
 import { ThemeContext } from '../context/theme-context';
 import LogoLight from '../svg/logo-light.svg';
 import LogoDark from '../svg/logo-dark.svg';
-import { mediaQueries } from '../theme/breakpoints.ts';
+import { mediaQueries } from '../theme/breakpoints';
 
 const { flexRow, justifyBetween } = mixins;
 

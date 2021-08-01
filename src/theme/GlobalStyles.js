@@ -1,5 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
-import { mediaQueries } from './breakpoints.ts';
+import { mediaQueries } from './breakpoints';
 
 const GlobalStyles = createGlobalStyle`
 body {

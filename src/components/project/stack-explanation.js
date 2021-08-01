@@ -4,7 +4,7 @@ import Subtitle from '../subtitle';
 import Text from '../text';
 import useTranslation from '../../hooks/useTranslation';
 import mixins from '../../theme/mixins';
-import { mediaQueries } from '../../theme/breakpoints.ts';
+import { mediaQueries } from '../../theme/breakpoints';
 
 const { flexRow, alignCenter } = mixins;
 

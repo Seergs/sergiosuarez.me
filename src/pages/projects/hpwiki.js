@@ -16,7 +16,7 @@ import {
 import useTranslation from '../../hooks/useTranslation';
 import mixins from '../../theme/mixins';
 import GatsbyIcon from '../../svg/gatsby.svg';
-import { mediaQueries } from '../../theme/breakpoints.ts';
+import { mediaQueries } from '../../theme/breakpoints';
 
 const { flexRow, justifyBetween } = mixins;
 

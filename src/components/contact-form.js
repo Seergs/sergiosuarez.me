@@ -5,7 +5,7 @@ import useTranslation from '../hooks/useTranslation';
 import mixins from '../theme/mixins';
 import useForm from '../hooks/useForm';
 import Text from './text';
-import { mediaQueries } from '../theme/breakpoints.ts';
+import { mediaQueries } from '../theme/breakpoints';
 
 const {
   flexRow, alignCenter, justifyCenter, flexColumn,

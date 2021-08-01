@@ -18,7 +18,7 @@ import useTranslation from '../../hooks/useTranslation';
 import mixins from '../../theme/mixins';
 import NodeIcon from '../../svg/node.svg';
 import SocketIcon from '../../svg/socketio.svg';
-import { mediaQueries } from '../../theme/breakpoints.ts';
+import { mediaQueries } from '../../theme/breakpoints';
 
 const { flexRow, justifyBetween } = mixins;
 

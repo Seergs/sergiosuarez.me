@@ -5,7 +5,7 @@ import Text from './text';
 import List from './list';
 import useTranslation from '../hooks/useTranslation';
 import mixins from '../theme/mixins';
-import { mediaQueries } from '../theme/breakpoints.ts';
+import { mediaQueries } from '../theme/breakpoints';
 
 const { flexRow, justifyBetween } = mixins;
 

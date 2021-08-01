@@ -2,7 +2,7 @@ import React from 'react';
 import styled, { css } from 'styled-components/macro';
 import Image from 'gatsby-image';
 import generateAltTexts from '../../utils/generateAltTexts';
-import { mediaQueries } from '../../theme/breakpoints.ts';
+import { mediaQueries } from '../../theme/breakpoints';
 
 const ImagesContainer = styled.section`
   display: grid;

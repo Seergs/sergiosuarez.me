@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components/macro';
 import useTranslation from '../hooks/useTranslation';
-import { mediaQueries } from '../theme/breakpoints.ts';
+import { mediaQueries } from '../theme/breakpoints';
 
 const Intro = styled.section`
   color: var(--color-headings);
