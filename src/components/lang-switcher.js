@@ -12,7 +12,7 @@ import SpainFlag from '../svg/es.svg';
 import { createChangeLangLink } from '../utils/create-link';
 import useTranslation from '../hooks/useTranslation';
 
-const { flexRow, alignCenter } = mixins;
+const { flexRow, alignCenter, justifyCenter } = mixins;
 
 const Wrapper = styled.div``;
 
@@ -26,7 +26,7 @@ const StyledLanguageSwitcher = styled.button`
   ${alignCenter};
   cursor: pointer;
 
-  svg:first-child {
+  & > svg:first-child {
     width: 20px;
     margin-right: 8px;
   }
@@ -36,6 +36,12 @@ const LanguagesList = styled(motion.ul)`
   position: absolute;
   top: 1.5rem;
   list-style-type: none;
+  background-color: var(--color-background);
+  opacity: .98;
+  width: 100%;
+  padding: 5px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
 `;
 
 const LanguageListItem = styled.li`
@@ -50,6 +56,7 @@ const Link = styled(GatsbyLink)`
   font-size: 0.9rem;
   ${flexRow};
   ${alignCenter};
+  ${justifyCenter};
   &::after {
     position: absolute;
     content: "";
