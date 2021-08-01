@@ -5,6 +5,7 @@ const Text = styled.p`
   max-width: 80ch;
   line-height: 1.8;
   letter-spacing: 1px;
+  text-align: justify;
 `;
 
 export default Text;

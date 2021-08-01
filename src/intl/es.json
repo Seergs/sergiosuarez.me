@@ -51,7 +51,7 @@
     },
     "projects_section": {
       "title": "Proyectos",
-      "link": "VER PROJECTO",
+      "link": "VER PROYECTO",
       "projects": {
         "mim": {
           "name": "Master Incident Manager",
@@ -64,10 +64,6 @@
         "hpwiki": {
           "name": "Harry Potter Wiki",
           "description": "Página web para Ptterheads como yo con datos curiosos e información interesante sobre el universo de Harry Potter."
-        },
-        "azahares-leslie": {
-          "name": "Azahares Leslie",
-          "description": "Página web para un negocio local de azahares."
         }
       }
     },
@@ -139,21 +135,6 @@
           "2": "Un lugar donde puedes descubrir a qué casa perteneces",
           "3": "Una página con todos los personajes y los hechizos del mundo mágico mostrados en un cool  componente de Accordion",
           "4": "Una página para descubrir datos curiosos sobre el universo de Harry Potter"
-        }
-      }
-    },
-    "azahares": {
-      "description": "Una landing page para un negocio local que muestre lo que hacen.",
-      "stack": {
-        "react": "Honestamente esta no fue la mejor decisión. Se podría haber creado con HTML/CSS. También en ese momento no conocía Gatsby."
-      },
-      "motivation": "Un negocio local necesitaba una página web para que los clientes vieran qué hacían y qué productos ofrecían.",
-      "solution": {
-        "text": "El producto final es una página web donde se muestra qué ofrece el negocio y la información acerca de ellos para que se facilite la comunicación con los clientes. Esta página provee:",
-        "list": {
-          "1": "Animaciones cool como fade-in en las imágenes ",
-          "2": "Un diseño elegante y moderno",
-          "3": "Una galería de productos ofrecidos por el negocio"
         }
       }
     }

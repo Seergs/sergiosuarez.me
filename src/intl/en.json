@@ -64,10 +64,6 @@
         "hpwiki": {
           "name": "Harry Potter Wiki",
           "description": "A website for Potterheads like me with fun facts and info about the Harry Potter universe."
-        },
-        "azahares-leslie": {
-          "name": "Azahares Leslie",
-          "description": "A landing  page for a local business."
         }
       }
     },
@@ -139,21 +135,6 @@
           "2": "A place to discover the house you belong to",
           "3": "A page with all the characters and spells from the Wizarding World displayed in an awesome Accordion component",
           "4": "A page to discover some fun fact about the Harry Potter universe"
-        }
-      }
-    },
-    "azahares": {
-      "description": "A landing page made for a local business to showcase what they do.",
-      "stack": {
-        "react": "Honestly this was not the best decision, I could've built it with plain HTML/CSS. Also at the moment I didn't know Gatsby."
-      },
-      "motivation": "A local business needed a website so clients could see what they do and what products they offer.",
-      "solution": {
-        "text": "The final product is a website to showcase the products the company offers and the information about it so that clients can contact them. This webpage provides:",
-        "list": {
-          "1": "Cool animations like image fade-in",
-          "2": "A nice modern and elegant design",
-          "3": "A gallery of the products offered by the business"
         }
       }
     }

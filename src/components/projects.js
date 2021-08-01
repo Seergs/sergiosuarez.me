@@ -48,13 +48,6 @@ export default function Projects({ images }) {
             alt: altTexts.hp,
           }}
         />
-        <ProjectCard
-          name="azahares-leslie"
-          image={{
-            src: images.find((i) => i.originalName.includes('azahares')),
-            alt: altTexts.azahares,
-          }}
-        />
       </Container>
     </Wrapper>
   );

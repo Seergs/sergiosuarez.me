@@ -17,8 +17,8 @@ const IndexPage = ({ data }) => {
     <Layout pageTitle="Sergio Suárez">
       <Introduction />
       <About resumeLink={resumeLink} />
-      <Skills />
       <Timeline />
+      <Skills />
       <Projects images={images} />
       <Contact />
     </Layout>
