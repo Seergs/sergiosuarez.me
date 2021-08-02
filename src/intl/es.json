@@ -18,7 +18,10 @@
         "1": "Soy un estudiante de ingeniería en computación en UDG",
         "2": "En mi viaje como desarrollador he trabajado con personas muy talentosas porque me gusta aprender y colaborar para crear increíbles e inovadores productos."
       },
-      "resume": "Ve mi currículum"
+      "resume": {
+        "note": "Si prefieres la versión formal también puedes ",
+        "link": "Ver mi currículum"
+      }
     },
     "skills": {
       "text": {
@@ -47,7 +50,8 @@
         "2": {
           "role": "Desarrollador de aplicaciones",
           "date_period": "Jun 2021 - Hoy",
-          "description": "Entré como empledo regular"
+          "description_short": "Después de estar trabajando como estudiante, me decidieron contratar full time, esto a su vez conlleva más responsabilidades y dedicación. Por lo que a día de hoy sigo trabajando en el mismo proyecto, aún así cada día aprende algo nuevo.",
+          "description": "Después de estar trabajando como estudiante, me decidieron contratar full time, esto a su vez conlleva más responsabilidades y dedicación. Por lo que a día de hoy sigo trabajando en el mismo proyecto, aún así cada día aprende algo nuevo. Entre mis responsabilides está el darle soporte a la aplicación así como la inclusión de nuevos requerimientos, también la migración del proyecto a tecnologías más modernas, ya que la aplicación es algo vieja y se quiere rediseñar."
         }
       }
     },
