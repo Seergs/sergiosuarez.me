@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components/macro';
 import Text from './text';
 import useTranslation from '../hooks/useTranslation';
+import { mediaQueries } from '../theme/breakpoints';
 
 const TimelineItemPositionWrapper = styled.div`
     position: relative;
@@ -20,6 +21,10 @@ const TimelineItemPosition = styled.div`
         left: -12px;
         right: 0; 
         bottom: 0;
+
+        ${mediaQueries('md')`
+          left: -16px;
+        `}
     }
     ::after {
         position: absolute;
@@ -32,7 +37,15 @@ const TimelineItemPosition = styled.div`
         left: -8px;
         right: 0; 
         bottom: 0;
+
+        ${mediaQueries('md')`
+          left: -12px;
+        `}
     }
+
+  ${mediaQueries('md')`
+    margin-left: 5px;
+  `}
 `;
 
 const TimelineItemDate = styled.small`
