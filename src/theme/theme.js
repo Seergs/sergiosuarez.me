@@ -1,7 +1,7 @@
 const theme = {
   light: {
     background: '#FFFFFF',
-    primary: '#4e7299',
+    primary: '#EF4444',
     headings: '#111827',
     text: '#4A5568',
     inputBackground: '#FFFFFF',
@@ -17,7 +17,7 @@ const theme = {
   dark: {
     background: '#111827',
     headings: '#F9FAFB',
-    primary: '#0891B2',
+    primary: '#F87171',
     text: '#D1D5DB',
     inputBackground: '#334155',
     inputOutline: '#475569',

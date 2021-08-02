@@ -19,10 +19,12 @@ export default function About({ resumeLink }) {
       <Subtitle>{t('home.about.subtitle')}</Subtitle>
       <Text>{t('home.about.text.1')}</Text>
       <Text>{t('home.about.text.2')}</Text>
-      <Text>{t('home.about.resume.note')}</Text>
-      <Button href={resumeLink} download="Sergio Suárez">
-        {t('home.about.resume.link')}
-      </Button>
+      <Text>
+        {t('home.about.resume.note')}
+        <Button href={resumeLink} download="Sergio Suárez">
+          {t('home.about.resume.link')}
+        </Button>
+      </Text>
     </Wrapper>
   );
 }

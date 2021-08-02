@@ -20,7 +20,7 @@
       },
       "resume": {
         "note": "Si prefieres la versión formal también puedes ",
-        "link": "Ver mi currículum"
+        "link": "ver mi currículum"
       }
     },
     "skills": {
@@ -34,6 +34,8 @@
     },
     "experience_section": {
       "title": "Experiencia profesional",
+      "read_more": "Leer más",
+      "read_less": "Leer menos",
       "cisco": {
         "role": "Becario de software",
         "date_period": "Feb 2020 - Jun 2020",
@@ -45,7 +47,7 @@
           "role": "Estudiante (software)",
           "date_period": "Feb 2021 - Jun 2021",
           "description_short": "Por 4 meses estuve de estudiante en un equipo, aquí trabajé con una aplicación ya existente donde los clientes de IBM compran software. Nunca había aprendido tanto como lo hice en esta etapa, ya que fue mi primera apoximación real a un trabajo en equipo mediante Scrum en un proyecto muy grande.",
-          "description": "Por 4 meses estuve de estudiante en un equipo, aquí trabajé con una aplicación ya existente donde los clientes de IBM compran software. Nunca había aprendido tanto como lo hice en esta etapa, ya que fue mi primera apoximación real a un trabajo en equipo mediante Scrum en un proyecto muy grande. Tuve la oportunidad de conocer a más desarrolladores, con mucha más experiencia, de los cuales aprendí muchísimo, no solo de desarrollo, sino de maneras de trabajo y cómo tener un buen balance trabajo-vida personal y estaré agradecido con ellos siempre. Aprendí no solo de programación, sino que también desarrollé como nunca mis soft skills, algo que hasta ese momento había descuidado. Desde un inició todos me apoyaron de gran manera y me implicaron en el proyecto como si fuera un developer más. No dejé de aprender en ese tiempo, y aunque la aplicación era gigantesca, en ningún momento me sentí presionado a hacer más de lo que podía. Aquí conocí a más students como yo y pasábamos buenos ratos"
+          "description": "Por 4 meses estuve de estudiante en un equipo, aquí trabajé con una aplicación ya existente donde los clientes de IBM compran software. Nunca había aprendido tanto como lo hice en esta etapa, ya que fue mi primera apoximación real a un trabajo en equipo mediante Scrum en un proyecto muy grande. Tuve la oportunidad de conocer a más desarrolladores, con mucha más experiencia, de los cuales aprendí muchísimo, no solo de desarrollo, sino de maneras de trabajo y cómo tener un buen balance trabajo-vida personal y estaré agradecido con ellos siempre. Aprendí no solo de programación, sino que también desarrollé como nunca mis soft skills, algo que hasta ese momento había descuidado. Desde un inició todos me apoyaron de gran manera y me implicaron en el proyecto como si fuera un developer más. No dejé de aprender en ese tiempo, y aunque la aplicación era gigantesca, en ningún momento me sentí presionado a hacer más de lo que podía. Aquí conocí a más students como yo y pasábamos buenos ratos."
         },
         "2": {
           "role": "Desarrollador de aplicaciones",

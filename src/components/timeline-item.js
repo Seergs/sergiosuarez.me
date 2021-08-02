@@ -10,7 +10,7 @@ const TimelineItemPositionWrapper = styled.div`
 
 const TimelineItemPosition = styled.div`
     margin-left: 10px;
-    margin-bottom: .6em;
+    margin-bottom: 1em;
     ::before {
         position: absolute;
         pointer-events: none;
@@ -69,14 +69,14 @@ const TimelineItem = ({ id }) => {
               <>
                 { t(`home.experience_section.${id}.description`) }
                 {' '}
-                <Button type="button" onClick={() => setShowMore(false)}> Read less</Button>
+                <Button type="button" onClick={() => setShowMore(false)}>{t('home.experience_section.read_less')}</Button>
               </>
             )
             : (
               <>
                 { t(`home.experience_section.${id}.description_short`) }
                 {' '}
-                <Button type="button" onClick={() => setShowMore(true)}>Read more</Button>
+                <Button type="button" onClick={() => setShowMore(true)}>{t('home.experience_section.read_more')}</Button>
               </>
             )}
         </Text>
