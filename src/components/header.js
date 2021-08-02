@@ -8,6 +8,7 @@ import { ThemeContext } from '../context/theme-context';
 import LanguageSwitcher from './lang-switcher';
 import mixins from '../theme/mixins';
 import ThemeSwitch from './theme-switch';
+import { mediaQueries } from '../theme/breakpoints';
 
 const { justifyBetween, flexRow, alignCenter } = mixins;
 
@@ -22,6 +23,10 @@ const Wrapper = styled.header`
   opacity: 0.98;
   ${flexRow};
   ${justifyBetween};
+
+  ${mediaQueries('md')`
+    position: initial;
+  `}
 `;
 
 const LightLogo = styled(LogoLight)`
