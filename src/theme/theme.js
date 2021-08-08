@@ -20,7 +20,7 @@ const theme = {
     primary: '#F87171',
     text: '#D1D5DB',
     inputBackground: '#334155',
-    inputOutline: '#475569',
+    inputOutline: 'transparent',
     focusOutline: '#90CDF4',
     contactButtonBackground: '#1E293B',
     contactButtonText: '#F9FAFB',
