@@ -34,14 +34,12 @@ const StyledLanguageSwitcher = styled.button`
 
 const LanguagesList = styled(motion.ul)`
   position: absolute;
-  top: 1.5rem;
+  top: 2.3rem;
   list-style-type: none;
   background-color: var(--color-background);
   opacity: .98;
   width: 100%;
   padding: 5px;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
 `;
 
 const LanguageListItem = styled.li`

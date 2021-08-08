@@ -4,7 +4,6 @@ import { graphql } from 'gatsby';
 import {
   Layout,
   Title,
-  StackCollapsed,
   Motivation,
   StackExplanation,
   ReactIcon,
@@ -73,9 +72,6 @@ export default function MIM({ data }) {
           <Description projectName="mim">
             <Links live="https://master-incident-management.netlify.app/" />
           </Description>
-          <StackCollapsed
-            stack={['React', 'Flask', 'Azure', 'MongoDB', 'Netlify', 'Heroku']}
-          />
         </Row>
         <Row>
           <Motivation text={t('project_page.mim.motivation')} />

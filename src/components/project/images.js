@@ -34,10 +34,13 @@ const ImageWrapper = styled.div`
 `;
 
 export default function Images({ images, projectName }) {
+  const sortedImages = images.sort((a, b) => a.originalName > b.originalName);
+  // eslint-disable-next-line no-console
+  console.log({ projectName, sortedImages });
   const altTexts = generateAltTexts(images);
   return (
     <ImagesContainer isTwoRows={projectName === 'chatify'}>
-      {images.map((image) => (
+      {sortedImages.map((image) => (
         <ImageWrapper key={image.originalName}>
           <Image fluid={image} alt={altTexts[projectName]} />
         </ImageWrapper>

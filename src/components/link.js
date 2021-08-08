@@ -16,7 +16,7 @@ export const StyledTextLink = styled.span`
     ${alignCenter};
     text-decoration: none;
     display: inline-block;
-    margin-top: 1rem;
+    margin-top: 0.5rem;
     background-color: transparent;
     border: 0;
     svg {

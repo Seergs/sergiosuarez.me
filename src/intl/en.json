@@ -15,7 +15,7 @@
     "about": {
       "subtitle": "About me",
       "text": {
-        "1": "I'm a 20 year old computer engineer student at UDG.",
+        "1": "I'm a 21 year old computer engineer student at UDG.",
         "2": "In my journey as a developer I've worked with talented people because I enjoy learning and collaborating to create beautiful and innovating products."
       },
       "resume": {
@@ -26,7 +26,7 @@
     "skills": {
       "text": {
         "1": "Through the years I've learned a lot in all sorts of technologies for web development and computer engineering.",
-        "2": "This skills have helped me build applications to solve real life problems."
+        "2": "These skills have helped me build applications to solve real life problems."
       },
       "col_1": "Programming",
       "col_2": "Libraries & frameworks",

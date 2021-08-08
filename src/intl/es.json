@@ -15,7 +15,7 @@
     "about": {
       "subtitle": "Acerca de mi",
       "text": {
-        "1": "Soy un estudiante de ingeniería en computación en UDG",
+        "1": "Soy un estudiante de ingeniería en computación en la Universidad de Guadalajara",
         "2": "En mi viaje como desarrollador he trabajado con personas muy talentosas porque me gusta aprender y colaborar para crear increíbles e inovadores productos."
       },
       "resume": {
@@ -120,9 +120,9 @@
         "socket_io": "Para la comunicación en tiempo real elegí socket.io, un motor rápido y poderoso. Funciona en cualquier plataforma, navegador o dispositivo, así que es la mejor opción.",
         "node": "La integración de socket.io con Express es muy fácil así que decidí usar NodeJs para el backend, para manejar el envío y recepción de mensajes."
       },
-      "motivation": "Quería aprender cómo funcionaban los websockets y las PWA's. Además quería mejorar mis habilidades en React así que decidí crear un chat en tiempo real, el cual es un project simple pero impresionante.",
+      "motivation": "Quería aprender cómo funcionaban los websockets y las PWA's. Además quería mejorar mis habilidades en React así que decidí crear un chat en tiempo real, el cual es un proyecto simple pero impresionante.",
       "solution": {
-        "text": "El producto final es una progressive web application que usa un poderoso motor para comunicación en tiempo real en el que puedes enviar mensajes y cualquier persona que esté en la aplicación lo va a recivir. También provee las siguientes características:",
+        "text": "El producto final es una progressive web application que usa un poderoso motor para comunicación en tiempo real en el que puedes enviar mensajes y cualquier persona que esté en la aplicación lo va a recibir. También provee las siguientes características:",
         "list": {
           "1": "Un panel central para ver todos los mensajes que se han enviado a lo largo de la historia del chat",
           "2": "Un panel que muestra todos los usuarios que están actualmente en la sala del chat",

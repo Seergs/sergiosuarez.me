@@ -1,7 +1,7 @@
 const theme = {
   light: {
     background: '#FFFFFF',
-    primary: '#EF4444',
+    primary: '#BE123C',
     headings: '#111827',
     text: '#4A5568',
     inputBackground: '#FFFFFF',

@@ -65,6 +65,7 @@ const Button = styled.button`
     border: 0;
     font-size: 1rem;
     cursor: pointer;
+    font-weight: bold;
 `;
 
 const TimelineItem = ({ id }) => {

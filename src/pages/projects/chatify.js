@@ -4,7 +4,6 @@ import { graphql } from 'gatsby';
 import {
   Layout,
   Title,
-  StackCollapsed,
   Motivation,
   StackExplanation,
   ReactIcon,
@@ -76,16 +75,6 @@ export default function Chatify({ data }) {
               clientRepo="https://github.com/Seergs/chatify-client"
             />
           </Description>
-          <StackCollapsed
-            stack={[
-              'React',
-              'NodeJs',
-              'socket.io',
-              'TailwindCSS',
-              'MongoDB',
-              'Heroku',
-            ]}
-          />
         </Row>
         <Row>
           <Motivation text={t('project_page.chatify.motivation')} />

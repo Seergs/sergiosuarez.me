@@ -93,7 +93,7 @@ const ProjectName = styled(Link)`
   font-weight: 500;
   font-size: 1.5rem;
   margin-top: 2.5rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   color: var(--color-headings);
 
   ${mediaQueries('md')`

@@ -4,7 +4,6 @@ import { graphql } from 'gatsby';
 import {
   Layout,
   Title,
-  StackCollapsed,
   Motivation,
   StackExplanation,
   Solution,
@@ -63,9 +62,6 @@ export default function Chatify({ data }) {
               clientRepo="https://github.com/Seergs/harrypotter-wiki"
             />
           </Description>
-          <StackCollapsed
-            stack={['Gatsby', 'Netlify', 'styled-components', 'framer-motion']}
-          />
         </Row>
         <Row>
           <Motivation text={t('project_page.hp.motivation')} />
