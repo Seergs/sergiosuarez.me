@@ -21,12 +21,12 @@ const Timeline = () => {
   return (
     <Container>
       <Subtitle>{t('home.experience_section.title')}</Subtitle>
+      <TimelineCompanyItem company="IBM">
+        <TimelineItem id="ibm.2" />
+        <TimelineItem id="ibm.1" />
+      </TimelineCompanyItem>
       <TimelineCompanyItem company="Cisco">
         <TimelineItem id="cisco" />
-      </TimelineCompanyItem>
-      <TimelineCompanyItem company="IBM">
-        <TimelineItem id="ibm.1" />
-        <TimelineItem id="ibm.2" />
       </TimelineCompanyItem>
     </Container>
   );
