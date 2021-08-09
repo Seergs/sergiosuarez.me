@@ -19,6 +19,7 @@ const Wrapper = styled.section`
 const Lists = styled.ul`
   ${flexRow};
   ${justifyBetween};
+  margin-top: 2rem;
 
   ${mediaQueries('lg')`
     gap: 4rem;
@@ -29,7 +30,7 @@ const Lists = styled.ul`
 const skills = {
   col_1: ['Javascript', 'Typescript', 'Python', 'SQL', 'C#', 'Java'],
   col_2: ['ReactJs', 'Gatsby', 'Node.js', 'NextJs', 'Express', 'Redux'],
-  col_3: ['git/Github', 'Netlify', 'Heroku', 'Azure', 'Firebase', 'MongoDB'],
+  col_3: ['git/Github', 'Docker', 'Kubernetes', 'Azure', 'Firebase', 'MongoDB'],
 };
 
 export default function Skills() {
@@ -37,8 +38,7 @@ export default function Skills() {
   return (
     <Wrapper>
       <Subtitle>Skills</Subtitle>
-      <Text>{t('home.skills.text.1')}</Text>
-      <Text>{t('home.skills.text.2')}</Text>
+      <Text>{t('home.skills.text')}</Text>
       <Lists>
         <List title={t('home.skills.col_1')} items={skills.col_1} />
         <List title={t('home.skills.col_2')} items={skills.col_2} />
