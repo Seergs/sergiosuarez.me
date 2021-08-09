@@ -6,7 +6,7 @@ function setColorsByTheme() {
   const colorModeKey = "🔑";
   const colorModeCssProp = "🎇";
 
-  let colorMode = "light";
+  let colorMode = "dark";
   const persistedColorPreference = window.localStorage.getItem(colorModeKey);
   const hastPersistedPreference = typeof persistedColorPreference === "string";
   const mql = window.matchMedia("(prefers-color-scheme: dark)");
