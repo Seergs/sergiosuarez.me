@@ -16,7 +16,7 @@ const TimelineItemPosition = styled.div`
         position: absolute;
         pointer-events: none;
         content: '●';
-        color: var(--color-text);
+        color: var(--color-headings);
         top: 0;
         left: -12px;
         right: 0; 
