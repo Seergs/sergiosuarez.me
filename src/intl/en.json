@@ -15,8 +15,8 @@
     "about": {
       "subtitle": "About me",
       "text": {
-        "1": "I'm a 21 year old computer engineer student at UDG.",
-        "2": "In my journey as a developer I've worked with talented people because I enjoy learning and collaborating to create beautiful and innovating products."
+        "1": "I'm a 21 year old computer engineer student at UDG with passion in developing innovative and modern technological products in order to solve problems",
+        "2": "I also believe that collaboration and cooperation are a very important aspect of life, which is why throughout my growth as a developer I've worked alongside some brilliant people from whom I've learned a lot."
       },
       "resume": {
         "note": "If you prefer, you can ",
@@ -24,31 +24,33 @@
       }
     },
     "skills": {
-      "text": {
-        "1": "Through the years I've learned a lot in all sorts of technologies for web development and computer engineering.",
-        "2": "These skills have helped me build applications to solve real life problems."
-      },
+      "text": "Through the years I've learned a lot in all sorts of technologies for development and for software engineer. These technologies have helped me build applications that serve a purpose and solve real life problems",
       "col_1": "Programming",
       "col_2": "Libraries & frameworks",
       "col_3": "Tools & platforms"
     },
     "experience_section": {
-      "title": "Professional experience",
+      "title": "Experience",
+      "read_more": "Read more",
+      "read_less": "Read less",
       "cisco": {
         "role": "Software intern",
         "date_period": "Feb 2020 - Jun 2020",
-        "description": "As part of a team, I designed and developed a software platform for incident tracking for the Supply Chain Area of Cisco, this would allow employees to log issues and analyze possible solutions for new incidents based on the issues history"
+        "description_short": "A worked alongside 4 talented interns to solve a current problem inside the Supply Chain Area of Cisco, the issue was that there was no way to keep track of incidents, errors and problems that happened everyday, hence the necessity of building a platform to satisfy this need.",
+        "description": "A worked alongside 4 talented interns to solve a current problem inside the Supply Chain Area of Cisco, the issue was that there was no way to keep track of incidents, errors and problems that happened everyday, hence the necessity of building a platform to satisfy this need. I was in constant collaboration, not just with my team but also with a mentor, who helped us a lot and from whom we learned so much. We were also in direct contact with the project leaders, who often did an analysis of our progress, propose changes and include new requirements for the system. I met a lot of people here, I learned so much and I had so much fun because it was an amazing experience."
       },
       "ibm": {
         "1": {
           "role": "Student (software)",
           "date_period": "Feb 2021 - Jun 2021",
-          "description": "I worked as an intern"
+          "description_short": "I joined a team as a student, here I worked in an existing application where IBM client could buy software. I had never learned so much as I did in this internship because it was my first real approximation to a real job with a team working with Scrum in a very large project.",
+          "description": "I joined a team as a student, here I worked in an existing application where IBM client could buy software. I had never learned so much as I did in this internship because it was my first real approximation to a real job with a team working with Scrum in a very large project. I had the opportunity to meet more experienced developers from whom I learned so much, not just about programming, but about how to work more efficiently, how to have a better work-life balance. I learned not just about code, I also developed my soft skills like never before. Since the beginning of this internship everyone supported and helped me, they included me in the project as if I were another developer and team member. I didn't stop learning in this internship and even though the application was colossal I never felt pressured. I also met some more interns during this time and we had good times with them."
         },
         "2": {
           "role": "Application developer",
           "date_period": "Jun 2021 - Today",
-          "description": "I joined as a full time employee"
+          "description_short": "After working as a student, IBM decided to hire me as a fulltime employee, this of course comes with much more responsibilities and dedication. Today I'm still working on the same project I worked when I was an intern but I keep learning everyday something new.",
+          "description": "After working as a student, IBM decided to hire me as a fulltime employee, this of course comes with much more responsibilities and dedication. Today I'm still working on the same project I worked when I was an intern but I keep learning everyday something new. Among my responsibilities are to provide support for the application as well as including new requirements. Also the project migration to modern technologies since it is currently running under very old frameworks and we are working on modernizing it. In general I'm working with Java, JSP and devOps services like Kubernetes and Docker."
         }
       }
     },
@@ -66,7 +68,7 @@
         },
         "hpwiki": {
           "name": "Harry Potter Wiki",
-          "description": "A website for Potterheads like me with fun facts and info about the Harry Potter universe."
+          "description": "A website for Potterheads with fun facts and info about the Harry Potter universe."
         }
       }
     },
@@ -78,15 +80,14 @@
       "label_2": "EMAIL",
       "label_3": "MESSAGE",
       "button_text": "Send message",
-      "submitted_text": "Thanks! I'll try to reply as soon as posible",
+      "submitted_text": "Thanks! I'll try to reply as soon as possible",
       "error": "Something went wrong, try contacting me on twitter instead"
     }
   },
   "project_page": {
-    "stack_title": "Tech Stack",
     "stack_explanation_title": "Stack explanation",
     "motivation_title": "Motivation",
-    "solution_title": "Solution",
+    "solution_title": "Final product",
     "website": "LIVE SITE",
     "mim": {
       "description": "This was part of the Cisco Mexico University Challenge where I worked with a team to build an incident tracker for the Supply Chain Area of Cisco, this would allow employees to log issues and analize possible solutions for new incidents based on the issues history.",
@@ -109,15 +110,15 @@
       }
     },
     "chatify": {
-      "description": "A progressive web application where you can chat with anyone around the world in real-time.",
+      "description": "A progressive web application (PWA) that uses websockets so that users can chat with any person that is currently in the chatroom in any part of the world.",
       "stack": {
-        "react": "This webapp had to be built with a frontend framework and React is the one that I have more experience with.",
-        "socket_io": "For the real-time communication I chose socket.io, a powerfull and fast engine. It works on every platform, browser or device, so it is the best option out there.",
+        "react": "This webapp had to be built with a frontend framework so that it could interactive and be able to automatically display every message when they were sent and React was the one that I have more experience with.",
+        "socket_io": "For the real-time communication I chose socket.io, a powerful and fast engine. It works on every platform, browser or device, so it is the best option out there.",
         "node": "Its very easy to integrate socket.io with the Express framework so I chose NodeJs for the backend to handle sending and recieving messages."
       },
       "motivation": "I wanted to learn how websockets and PWA's worked and also I wanted to improve my expertise in React so I decided to build a real-time chat wich is an impressive but simple project.",
       "solution": {
-        "text": "The final product is a progressive web application that uses a powerfull engine for real-time communication so you can send messages and everyone that uses the app will recieve it. It also provides the following features:",
+        "text": "The final product is a progressive web application that uses a powerful engine for real-time communication so you can send messages and everyone that uses the app will recieve it. It also provides the following features:",
         "list": {
           "1": "A central panel to see all messages sent in the history of the app",
           "2": "A panel that displays all users that are currently on the chat room",

@@ -15,8 +15,8 @@
     "about": {
       "subtitle": "Acerca de mi",
       "text": {
-        "1": "Soy un estudiante de ingeniería en computación en la Universidad de Guadalajara",
-        "2": "En mi viaje como desarrollador he trabajado con personas muy talentosas porque me gusta aprender y colaborar para crear increíbles e inovadores productos."
+        "1": "Soy un estudiante de ingeniería en computación en la Universidad de Guadalajara con pasión en desarrollar productos tecnológicos innovadores y modernos para la solución de problemas",
+        "2": "También soy fiel creyente de que la colaboración y cooperación son un aspecto importante de la vida, por lo que en mi crecimiento como desarrollador he trabajado al lado de personas muy talentosas de las que he aprendido mucho."
       },
       "resume": {
         "note": "Si prefieres la versión formal también puedes ",
@@ -24,36 +24,33 @@
       }
     },
     "skills": {
-      "text": {
-        "1": "A lo largo de los años he aprendido bastante sobre diversas tecnologías para desarrollo web e ingeniería de software.",
-        "2": "Estas tecnologías me han ayudado a crear aplicaciones que resuelvan problemas del mundo real."
-      },
+      "text": "A lo largo de los años he aprendido bastante sobre diversas tecnologías para desarrollo e ingeniería de software. Estas tecnologías me han ayudado a crear aplicaciones que resuelvan problemas del mundo real.",
       "col_1": "Programación",
       "col_2": "Librerías & frameworks",
       "col_3": "Herramientas & plataformas"
     },
     "experience_section": {
-      "title": "Experiencia profesional",
+      "title": "Experiencia",
       "read_more": "Leer más",
       "read_less": "Leer menos",
       "cisco": {
         "role": "Becario de software",
         "date_period": "Feb 2020 - Jun 2020",
-        "description_short": "Durante 5 meses estuve trabajando al lado de otros 4 becarios muy talentosos para resolver una problemática que existía en el área de Supply Chain de Cisco, esto era, no había manera de llevar un tracking de los incidentes, errores y problemas que ocurrían a diario, por lo que era necesario crear una plataforma para satisfacer esta necesidad.",
-        "description": "Durante 5 meses estuve trabajando al lado de otros 4 becarios muy talentosos para resolver una problemática que existía en el área de Supply Chain de Cisco, esto era, no había manera de llevar un tracking de los incidentes, errores y problemas que ocurrían a diario, por lo que era necesario crear una plataforma para satisfacer esta necesidad. Estuve en constante colaboración, no solo con mi equipo de trabajo sino también con un mentor que teníamos asigando, el cual nos apoyó mucho y del cual aprendimos bastante. También con los líderes del proyecto, los cuales analizaban de vez en cuando nuestros avances y proponían cambios o incluían nuevos requerimientos para el sistema. Conocí a muchas personas, aprendí mucho y sobre todo, me divertí y fue una experiencia increíble."
+        "description_short": "Estuve trabajando al lado de otros 4 becarios muy talentosos para resolver una problemática que existía en el área de Supply Chain de Cisco, esto era, no había manera de llevar un tracking de los incidentes, errores y problemas que ocurrían a diario, por lo que era necesario crear una plataforma para satisfacer esta necesidad.",
+        "description": "Estuve trabajando al lado de otros 4 becarios muy talentosos para resolver una problemática que existía en el área de Supply Chain de Cisco, esto era, no había manera de llevar un tracking de los incidentes, errores y problemas que ocurrían a diario, por lo que era necesario crear una plataforma para satisfacer esta necesidad. Estuve en constante colaboración, no solo con mi equipo de trabajo sino también con un mentor que teníamos asigando, el cual nos apoyó mucho y del cual aprendimos bastante. También con los líderes del proyecto, los cuales analizaban de vez en cuando nuestros avances y proponían cambios o incluían nuevos requerimientos para el sistema. Conocí a muchas personas, aprendí mucho y sobre todo, me divertí y fue una experiencia increíble."
       },
       "ibm": {
         "1": {
           "role": "Estudiante (software)",
           "date_period": "Feb 2021 - Jun 2021",
-          "description_short": "Por 4 meses estuve de estudiante en un equipo, aquí trabajé con una aplicación ya existente donde los clientes de IBM compran software. Nunca había aprendido tanto como lo hice en esta etapa, ya que fue mi primera apoximación real a un trabajo en equipo mediante Scrum en un proyecto muy grande.",
-          "description": "Por 4 meses estuve de estudiante en un equipo, aquí trabajé con una aplicación ya existente donde los clientes de IBM compran software. Nunca había aprendido tanto como lo hice en esta etapa, ya que fue mi primera apoximación real a un trabajo en equipo mediante Scrum en un proyecto muy grande. Tuve la oportunidad de conocer a más desarrolladores, con mucha más experiencia, de los cuales aprendí muchísimo, no solo de desarrollo, sino de maneras de trabajo y cómo tener un buen balance trabajo-vida personal y estaré agradecido con ellos siempre. Aprendí no solo de programación, sino que también desarrollé como nunca mis soft skills, algo que hasta ese momento había descuidado. Desde un inició todos me apoyaron de gran manera y me implicaron en el proyecto como si fuera un developer más. No dejé de aprender en ese tiempo, y aunque la aplicación era gigantesca, en ningún momento me sentí presionado a hacer más de lo que podía. Aquí conocí a más students como yo y pasábamos buenos ratos."
+          "description_short": "Me integré como estudiante en un equipo, aquí trabajé con una aplicación ya existente donde los clientes de IBM compran software. Nunca había aprendido tanto como lo hice en esta etapa, ya que fue mi primera apoximación real a un trabajo en equipo mediante Scrum en un proyecto muy grande.",
+          "description": "Me integré como estudiante en un equipo, aquí trabajé con una aplicación ya existente donde los clientes de IBM compran software. Nunca había aprendido tanto como lo hice en esta etapa, ya que fue mi primera apoximación real a un trabajo en equipo mediante Scrum en un proyecto muy grande. Tuve la oportunidad de conocer a más desarrolladores, con mucha más experiencia, de los cuales aprendí muchísimo, no solo de desarrollo, sino de maneras de trabajo y cómo tener un buen balance trabajo-vida personal y estaré agradecido con ellos siempre. Aprendí no solo de programación, sino que también desarrollé como nunca mis soft skills, algo que hasta ese momento había descuidado. Desde un inició todos me apoyaron de gran manera y me implicaron en el proyecto como si fuera un developer más. No dejé de aprender en ese tiempo, y aunque la aplicación era gigantesca, en ningún momento me sentí presionado a hacer más de lo que podía. Aquí conocí a más students como yo y pasábamos buenos ratos."
         },
         "2": {
           "role": "Desarrollador de aplicaciones",
           "date_period": "Jun 2021 - Hoy",
           "description_short": "Después de estar trabajando como estudiante, me decidieron contratar full time, esto a su vez conlleva más responsabilidades y dedicación. Por lo que a día de hoy sigo trabajando en el mismo proyecto, aún así cada día aprende algo nuevo.",
-          "description": "Después de estar trabajando como estudiante, me decidieron contratar full time, esto a su vez conlleva más responsabilidades y dedicación. Por lo que a día de hoy sigo trabajando en el mismo proyecto, aún así cada día aprende algo nuevo. Entre mis responsabilides está el darle soporte a la aplicación así como la inclusión de nuevos requerimientos, también la migración del proyecto a tecnologías más modernas, ya que la aplicación es algo vieja y se quiere rediseñar."
+          "description": "Después de estar trabajando como estudiante, me decidieron contratar full time, esto a su vez conlleva más responsabilidades y dedicación. Por lo que a día de hoy sigo trabajando en el mismo proyecto, aún así cada día aprende algo nuevo. Entre mis responsabilides está el darle soporte a la aplicación así como la inclusión de nuevos requerimientos, también la migración del proyecto a tecnologías más modernas, ya que la aplicación es algo vieja y se quiere rediseñar, por lo general estoy trabajando con Java, JSP y servicios de devOps como Kubernetes y Docker."
         }
       }
     },
@@ -71,7 +68,7 @@
         },
         "hpwiki": {
           "name": "Harry Potter Wiki",
-          "description": "Página web para Ptterheads como yo con datos curiosos e información interesante sobre el universo de Harry Potter."
+          "description": "Página web para Potterheads con datos curiosos e información interesante sobre el universo de Harry Potter."
         }
       }
     },
@@ -84,15 +81,14 @@
       "label_3": "MENSAJE",
       "button_text": "Enviar mensaje",
       "submitted_text": "Gracias! Intentaré responder tan pronto como pueda",
-      "error": "Algo salió mal, mándame DM en twitter"
+      "error": "Algo salió mal, puedes mandarme DM en twitter si prefieres"
     }
   },
   "project_page": {
-    "stack_title": "Tecnologías",
-    "stack_explanation_title": "Explicación de las tecnologías elegidas",
+    "stack_explanation_title": "Stack de teconologías",
     "motivation_title": "Motivación",
     "website": "SITIO WEB",
-    "solution_title": "Solución",
+    "solution_title": "Producto final",
     "mim": {
       "description": "Este proyecto fue parte del Cisco Mexico University Challenge donde trabajé con un equipo para crear un administrador de incidentes para el área de Supply Chain de Cisco. Este ayudaría a que los empleados pudieran llevar seguimiento de los errores y analizar las posibles soluciones para los nuevos incidentes en base al historial de estos.",
       "stack": {
@@ -114,9 +110,9 @@
       }
     },
     "chatify": {
-      "description": "Una progressive web application (PWA) en la que puedes chatear con cualquier persona del mundo en tiempo real.",
+      "description": "Una progressive web application (PWA) que utiliza websockets para que los usarios puedan chatear con cualquier persona que este dentro del chat en cualquier parte del mundo en tiempo real.",
       "stack": {
-        "react": "Esta aplicación tenía que ser creada con un framework para el frontend y React era con el que tenía más experiencia.",
+        "react": "Esta aplicación tenía que ser creada con un framework para el frontend para que pudiera ser interactiva y poder mostrar los mensajes automáticamente cada que llegaran y React era con el que tenía más experiencia.",
         "socket_io": "Para la comunicación en tiempo real elegí socket.io, un motor rápido y poderoso. Funciona en cualquier plataforma, navegador o dispositivo, así que es la mejor opción.",
         "node": "La integración de socket.io con Express es muy fácil así que decidí usar NodeJs para el backend, para manejar el envío y recepción de mensajes."
       },
